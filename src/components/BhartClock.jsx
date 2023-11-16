@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-const BhartClock = () => {
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
+const BharatClock = () => {
+  const [time, setTime] = useState(new Date().toLocaleString());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const currentTime = new Date().toLocaleTimeString();
+      const currentTime = new Date().toLocaleString();
       setTime(currentTime);
     }, 1000);
 
@@ -14,9 +14,9 @@ const BhartClock = () => {
   return (
     <div className="bg-black h-screen text-white flex justify-center items-center flex-col gap-5">
       <div className="text-5xl font-bold">Bharat Clock</div>
-      <h1 className="text-4xl">the time is {time}</h1>
+      <h1 className="text-4xl">The Date &  time is {time}</h1>
     </div>
   );
 };
 
-export default BhartClock;
+export default BharatClock;

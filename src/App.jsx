@@ -3,6 +3,7 @@ import SearchFilter from './components/SearchFilter'
 import ItemsPerPage from './components/ItemsPerPage'
 import ColorPicker from './components/ColorPicker'
 import Responsive from './components/Responsive'
+import BhartClock from './components/BhartClock'
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
   {/* <SearchFilter/> */}
   {/* <ItemsPerPage/> */}
   {/* <ColorPicker/> */}
-  <Responsive/>
+  {/* <Responsive/> */}
+  <BhartClock/>
 
   
   </div>

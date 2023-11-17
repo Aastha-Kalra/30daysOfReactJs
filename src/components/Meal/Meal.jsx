@@ -3,8 +3,7 @@ import MealItem from "./MealItem";
 import RecipeIndex from "./RecipeIndex";
 
 const Meal = () => {
-  const url = "https://www.themealdb.com/api/json/v1/1/search.php?f=a";
-
+  const [url, setUrl] = useState("https://www.themealdb.com/api/json/v1/1/search.php?f=a")
   const [item, setItem] = useState();
   const [show, setShow] = useState(false);
 
@@ -17,8 +16,12 @@ const Meal = () => {
         setShow(true);
       });
   }, [url]);
+
+  const setIndex = (alpha)=>{
+    setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`)
+  }
   return (
-    <div className="bg-black h-screen text-white flex items-center flex-col gap-5  p-2">
+    <div className="bg-black h-full text-white flex items-center flex-col gap-5  p-2 pb-10">
       <div className="text-4xl font-bold">Search Your Food Recipe</div>
 
       <div>
@@ -30,9 +33,13 @@ const Meal = () => {
       </div>
 
       <div className="grid grid-cols-4 gap-10 my-10 px-14">
-        {show ? <MealItem data={item} /> : "Not Found"}
+        {show ? <MealItem data={item} /> : (
+          <div className="text-5xl font-bold">
+            Not Found
+          </div>
+        )}
       </div>
-      <RecipeIndex />
+      <RecipeIndex  alphaIndex={(alpha)=>setIndex(alpha)}/>
     </div>
   );
 };

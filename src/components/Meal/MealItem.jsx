@@ -5,7 +5,11 @@ const MealItem = ({ data }) => {
   return (
     <>
       {!data
-        ? "Notfound"
+        ? (
+          <div className="text-5xl font-bold">
+            Not Found
+          </div>
+        )
         : data.map((item) => {
             return (
               <div className="bg-purple-600 p-6 rounded hover:scale-90 transition-all duration-500 ease-in cursor-pointer">

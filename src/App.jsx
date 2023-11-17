@@ -10,7 +10,7 @@ function App() {
 
 
   return (
-  <div className='bg-black h-screen'>
+  <div className='bg-black min-h-screen'>
   {/* <SearchFilter/> */}
   {/* <ItemsPerPage/> */}
   {/* <ColorPicker/> */}

@@ -4,6 +4,7 @@ import ItemsPerPage from './components/ItemsPerPage'
 import ColorPicker from './components/ColorPicker'
 import Responsive from './components/Responsive'
 import BharatClock from './components/BhartClock'
+import Meal from './components/Meal/Meal'
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
   {/* <ItemsPerPage/> */}
   {/* <ColorPicker/> */}
   {/* <Responsive/> */}
-  <BharatClock/>
+  {/* <BharatClock/> */}
+  <Meal/>
 
   
   </div>

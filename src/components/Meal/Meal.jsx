@@ -6,6 +6,8 @@ const Meal = () => {
   const [url, setUrl] = useState("https://www.themealdb.com/api/json/v1/1/search.php?f=a")
   const [item, setItem] = useState();
   const [show, setShow] = useState(false);
+  const [search, setSearch]= useState('');
+
 
   useEffect(() => {
     fetch(url)
@@ -16,6 +18,14 @@ const Meal = () => {
         setShow(true);
       });
   }, [url]);
+
+
+  const handleSearch=(e)=>{
+  if(  e.key=="Enter"){
+    setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+  }
+
+  }
 
   const setIndex = (alpha)=>{
     setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`)
@@ -29,6 +39,8 @@ const Meal = () => {
           type="text"
           className="rounded h-14 p-2 w-96 text-xl bg-purple-300 focus:outline-none text-white/90 font-semibold"
           placeholder="Enter Your Dish Name here..."
+          onChange={(e)=>setSearch(e.target.value)}
+          onKeyPress={handleSearch}
         />
       </div>
 

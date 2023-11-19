@@ -29,12 +29,14 @@ const RecipeInfo = () => {
           <h1 className="font-bold text-4xl text-purple-950">
             {item.strCategory}
           </h1>
-          <img
+         <div className="w-full ">
+         <img
             src={item.strMealThumb}
             alt={item.strMeal}
-            className="w-96 rounded-md"
+            className="w-full h-[500px] rounded-md"
           />
 
+         </div>
           <div className="flex justify-center items-center gap-5 w-full">
             <div className="w-full">
               <div className="text-4xl font-bold p-2 text-center text-purple-950">
@@ -49,16 +51,16 @@ const RecipeInfo = () => {
               <h1 className="text-4xl font-bold text-center p-2 text-purple-950">
                 Ingredients
               </h1>
-              <div className="text-4xl font-bold grid grid-cols-2 w-full bg-purple-950 p-5 text-sky-500 hover:scale-95 transition-all ease-in duration-500">
-                <div>1-{item.strIngredient1}</div>
-                <div>2-{item.strIngredient2}</div>
-                <div>3-{item.strIngredient3}</div>
-                <div>4-{item.strIngredient4}</div>
-                <div>5-{item.strIngredient5}</div>
-                <div>6-{item.strIngredient6}</div>
-                <div>7-{item.strIngredient7}</div>
-                <div>8-{item.strIngredient8}</div>
-                <div>9-{item.strIngredient9}</div>
+              <div className="text-4xl font-semibold grid grid-cols-1 w-full bg-purple-950 p-4 gap-x-10 justify-between items-center text-sky-500 hover:scale-95 scale-90 transition-all ease-in duration-500">
+                <div>1-{item.strIngredient1} : {item.strMeasure1}</div>
+                <div>2-{item.strIngredient2} : {item.strMeasure2}</div>
+                <div>3-{item.strIngredient3} : {item.strMeasure3}</div>
+                <div>4-{item.strIngredient4} : {item.strMeasure4}</div>
+                <div>5-{item.strIngredient5} : {item.strMeasure5}</div>
+                <div>6-{item.strIngredient6} : {item.strMeasure6}</div>
+                <div>7-{item.strIngredient7} : {item.strMeasure7}</div>
+                <div>8-{item.strIngredient8} : {item.strMeasure8}</div>
+                <div>9-{item.strIngredient9} : {item.strMeasure9}</div>
               </div>
             </div>
           </div>

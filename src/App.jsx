@@ -7,6 +7,7 @@ import BharatClock from "./components/BhartClock";
 import Meal from "./components/Meal/Meal";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RecipeInfo from "./components/Meal/RecipeInfo";
+import SocialButtons from "./components/SocialButtons";
 function App() {
   return (
     <div className="bg-black min-h-screen">
@@ -15,12 +16,13 @@ function App() {
       {/* <ColorPicker/> */}
       {/* <Responsive/> */}
       {/* <BharatClock/> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Meal />} />
           <Route path="/:MealId" element={<RecipeInfo />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <SocialButtons/>
     </div>
   );
 }

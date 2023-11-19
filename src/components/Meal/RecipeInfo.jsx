@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+let vId = "";
 const RecipeInfo = () => {
   const [item, setItem] = useState();
   const { MealId } = useParams();
-  if (MealId != "") {
+
+  if (MealId !== "") {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${MealId}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data.meals[0]);
       });
+  }
+
+  if (item) {
+    const url = item.strYoutube;
+    const str = url.split("=");
+    vId = str[str.length - 1];
   }
 
   return (
@@ -41,18 +49,26 @@ const RecipeInfo = () => {
               <h1 className="text-4xl font-bold text-center p-2 text-purple-950">
                 Ingredients
               </h1>
-              <div className="text-4xl font-bold grid grid-cols-3 w-full bg-purple-950 p-20 gap-10 text-sky-500 hover:scale-95 transition-all ease-in duration-500">
-                <div>{item.strIngredient1}</div>
-                <div>{item.strIngredient2}</div>
-                <div>{item.strIngredient3}</div>
-                <div>{item.strIngredient4}</div>
-                <div>{item.strIngredient5}</div>
-                <div>{item.strIngredient6}</div>
-                <div>{item.strIngredient7}</div>
-                <div>{item.strIngredient8}</div>
-                <div>{item.strIngredient9}</div>
+              <div className="text-4xl font-bold grid grid-cols-2 w-full bg-purple-950 p-5 text-sky-500 hover:scale-95 transition-all ease-in duration-500">
+                <div>1-{item.strIngredient1}</div>
+                <div>2-{item.strIngredient2}</div>
+                <div>3-{item.strIngredient3}</div>
+                <div>4-{item.strIngredient4}</div>
+                <div>5-{item.strIngredient5}</div>
+                <div>6-{item.strIngredient6}</div>
+                <div>7-{item.strIngredient7}</div>
+                <div>8-{item.strIngredient8}</div>
+                <div>9-{item.strIngredient9}</div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-10 w-full h-[540px]">
+            <iframe
+              src={`https://www.youtube.com/embed/${vId}`}
+              frameborder="0"
+              className="w-full h-full"
+            ></iframe>
           </div>
         </div>
       )}

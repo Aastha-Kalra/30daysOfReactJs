@@ -8,6 +8,7 @@ import Meal from "./components/Meal/Meal";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RecipeInfo from "./components/Meal/RecipeInfo";
 import SocialButtons from "./components/SocialButtons";
+import LetterCalculator from "./components/LetterCalculator";
 function App() {
   return (
     <div className="bg-black min-h-screen">
@@ -22,7 +23,8 @@ function App() {
           <Route path="/:MealId" element={<RecipeInfo />} />
         </Routes>
       </BrowserRouter> */}
-      <SocialButtons/>
+      {/* <SocialButtons/> */}
+<LetterCalculator/>
     </div>
   );
 }

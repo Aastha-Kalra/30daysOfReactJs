@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RecipeInfo from "./components/Meal/RecipeInfo";
 import SocialButtons from "./components/SocialButtons";
 import LetterCalculator from "./components/LetterCalculator";
+import RandomNumber from "./components/RandomNumber";
 function App() {
   return (
     <div className="bg-black min-h-screen">
@@ -24,7 +25,8 @@ function App() {
         </Routes>
       </BrowserRouter> */}
       {/* <SocialButtons/> */}
-<LetterCalculator/>
+      {/* <LetterCalculator/> */}
+      <RandomNumber/>
     </div>
   );
 }

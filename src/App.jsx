@@ -10,6 +10,7 @@ import RecipeInfo from "./components/Meal/RecipeInfo";
 import SocialButtons from "./components/SocialButtons";
 import LetterCalculator from "./components/LetterCalculator";
 import RandomNumber from "./components/RandomNumber";
+import CountryCapital from "./components/CountryCapital";
 function App() {
   return (
     <div className="bg-black min-h-screen">
@@ -26,7 +27,8 @@ function App() {
       </BrowserRouter> */}
       {/* <SocialButtons/> */}
       {/* <LetterCalculator/> */}
-      <RandomNumber/>
+      {/* <RandomNumber/> */}
+      <CountryCapital/>
     </div>
   );
 }

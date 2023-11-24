@@ -11,6 +11,7 @@ import SocialButtons from "./components/SocialButtons";
 import LetterCalculator from "./components/LetterCalculator";
 import RandomNumber from "./components/RandomNumber";
 import CountryCapital from "./components/CountryCapital";
+import DsaPractice from "./DSA/DsaPractice";
 function App() {
   return (
     <div className="bg-black min-h-screen">
@@ -28,7 +29,8 @@ function App() {
       {/* <SocialButtons/> */}
       {/* <LetterCalculator/> */}
       {/* <RandomNumber/> */}
-      <CountryCapital/>
+      {/* <CountryCapital/> */}
+   <DsaPractice/>
     </div>
   );
 }

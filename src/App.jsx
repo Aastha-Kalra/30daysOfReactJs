@@ -12,6 +12,7 @@ import LetterCalculator from "./components/LetterCalculator";
 import RandomNumber from "./components/RandomNumber";
 import CountryCapital from "./components/CountryCapital";
 import DsaPractice from "./DSA/DsaPractice";
+import Pexels from "./components/Pexels";
 function App() {
   return (
     <div className="bg-black min-h-screen">
@@ -30,7 +31,8 @@ function App() {
       {/* <LetterCalculator/> */}
       {/* <RandomNumber/> */}
       {/* <CountryCapital/> */}
-   <DsaPractice/>
+   {/* <DsaPractice/> */}
+   <Pexels/>
     </div>
   );
 }

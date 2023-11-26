@@ -12,7 +12,7 @@ import LetterCalculator from "./components/LetterCalculator";
 import RandomNumber from "./components/RandomNumber";
 import CountryCapital from "./components/CountryCapital";
 import DsaPractice from "./DSA/DsaPractice";
-import Pexels from "./components/Pexels";
+import Pexels from "./components/Pexel/Pexels";
 function App() {
   return (
     <div className="bg-black min-h-screen">

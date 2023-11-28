@@ -14,6 +14,7 @@ import CountryCapital from "./components/CountryCapital";
 import DsaPractice from "./DSA/DsaPractice";
 import Pexels from "./components/Pexel/Pexels";
 import NewYear from "./components/NewYear";
+import QRcode from "./components/qr/QRCode";
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
    {/* <DsaPractice/> */}
    {/* <Pexels/> */}
    <NewYear/>
-  
+  <QRcode/>
     </div>
   );
 }

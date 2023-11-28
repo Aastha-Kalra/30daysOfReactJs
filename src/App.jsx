@@ -13,9 +13,11 @@ import RandomNumber from "./components/RandomNumber";
 import CountryCapital from "./components/CountryCapital";
 import DsaPractice from "./DSA/DsaPractice";
 import Pexels from "./components/Pexel/Pexels";
+import NewYear from "./components/NewYear";
+
 function App() {
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-black min-h-screen w-full overflow-hidden">
       {/* <SearchFilter/> */}
       {/* <ItemsPerPage/> */}
       {/* <ColorPicker/> */}
@@ -32,7 +34,9 @@ function App() {
       {/* <RandomNumber/> */}
       {/* <CountryCapital/> */}
    {/* <DsaPractice/> */}
-   <Pexels/>
+   {/* <Pexels/> */}
+   <NewYear/>
+  
     </div>
   );
 }

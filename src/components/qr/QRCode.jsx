@@ -16,7 +16,9 @@ const QRcode = () => {
           className="w-96 h-14 rounded-md bg-teal-300 text-black text-2xl p-2 focus:outline-none"
         />
 
-        {input && <QRCode value={input} />}
+        <div className="w-full h-96 my-10">
+        {input && <QRCode value={input} size={400} />}
+        </div>
       </div>
     </div>
   );

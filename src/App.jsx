@@ -36,7 +36,7 @@ function App() {
       {/* <CountryCapital/> */}
    {/* <DsaPractice/> */}
    {/* <Pexels/> */}
-   <NewYear/>
+   {/* <NewYear/> */}
   <QRcode/>
     </div>
   );

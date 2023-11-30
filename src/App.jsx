@@ -15,6 +15,7 @@ import DsaPractice from "./DSA/DsaPractice";
 import Pexels from "./components/Pexel/Pexels";
 import NewYear from "./components/NewYear";
 import QRcode from "./components/qr/QRCode";
+import Dictionary from "./components/Dictionary/Dictionary";
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
    {/* <DsaPractice/> */}
    {/* <Pexels/> */}
    {/* <NewYear/> */}
-  <QRcode/>
+  {/* <QRcode/> */}
+  <Dictionary/>
     </div>
   );
 }

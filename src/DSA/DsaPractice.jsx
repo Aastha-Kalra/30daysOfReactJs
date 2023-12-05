@@ -89,9 +89,39 @@ const DsaPractice = () => {
     }
     return false;
   }
-  console.log(FindElement([1, 2, 3], 3));
+  // console.log(FindElement([1, 2, 3], 3));
 
-  
+  // 8: Find Index of element
+  function FindIndex(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === target) {
+        return i;
+      } else -1;
+    }
+  }
+  // console.log(FindIndex([1, 2, 3], 3));
+
+  // 9: add, delete and update on index
+  let arr = [1, 2, 3, 4];
+  //  arr.splice(1,0,567) add
+  // arr.splice(2,3) delete
+  // arr.splice(1,2,'Hello') update
+  // console.log(arr);
+
+  //  10: flat the array
+  let array = [1, 2, [3, 4, 5, [6, 7], 8], 9, 10];
+  let flattedArray = array.flat(1);
+  // console.log(flattedArray);
+
+
+  // 11:max,min array
+  let arr1 = [1, 2, 3, 4];
+  // console.log(Math.min(...arr1));
+
+  // 12: reverse the array
+  // console.log(arr1.reverse());
+
+  // 13:
   return (
     <div>
       <div className="text-white font-bold text-5xl text-center">

@@ -16,6 +16,7 @@ import Pexels from "./components/Pexel/Pexels";
 import NewYear from "./components/NewYear";
 import QRcode from "./components/qr/QRCode";
 import Dictionary from "./components/Dictionary/Dictionary";
+import InputSubmission from "./components/InputSubmission";
 
 function App() {
   return (
@@ -39,7 +40,8 @@ function App() {
    {/* <Pexels/> */}
    {/* <NewYear/> */}
   {/* <QRcode/> */}
-  <Dictionary/>
+  {/* <Dictionary/> */}
+  <InputSubmission/>
     </div>
   );
 }

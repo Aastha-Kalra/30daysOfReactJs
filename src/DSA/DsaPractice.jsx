@@ -108,20 +108,58 @@ const DsaPractice = () => {
   // arr.splice(1,2,'Hello') update
   // console.log(arr);
 
-  //  10: flat the array
-  let array = [1, 2, [3, 4, 5, [6, 7], 8], 9, 10];
-  let flattedArray = array.flat(1);
+  // //  10: flat the array
+  // let array = [1, 2, [3, 4, 5, [6, 7], 8], 9, 10];
+  // let flattedArray = array.flat(1);
   // console.log(flattedArray);
 
-
   // 11:max,min array
-  let arr1 = [1, 2, 3, 4];
+  // let arr1 = [1, 2, 3, 4];
   // console.log(Math.min(...arr1));
 
   // 12: reverse the array
   // console.log(arr1.reverse());
 
-  // 13:
+  // 13: reverse string
+  // let str = "aastha kalra";
+  // console.log("reverse",str.split("").reverse().join(""));
+
+  // 14: check if an object is array or not
+  // function CheckArray(elem) {
+  //   return Array.isArray(elem);
+  // }
+  // console.log(CheckArray([]), CheckArray({}));
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div>
       <div className="text-white font-bold text-5xl text-center">

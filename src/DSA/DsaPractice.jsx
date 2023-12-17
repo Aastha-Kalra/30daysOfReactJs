@@ -145,39 +145,18 @@ const DsaPractice = () => {
 
   // console.log(Number("24324"));
 
-  // 17: duplicate the given number 
+  // 17: duplicate the given number
   // function Duplicate(arr){
   //   console.log(arr.concat(arr));
   // }
   // Duplicate(["hello","hii"]);
 
+  // 18: reverse a number
+  function ReverseNum(num) {
+    return num.toString().split("").reverse().join("")
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  console.log("Reverse Number",ReverseNum(23243));
 
   return (
     <div>

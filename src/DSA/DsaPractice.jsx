@@ -152,11 +152,53 @@ const DsaPractice = () => {
   // Duplicate(["hello","hii"]);
 
   // 18: reverse a number
-  function ReverseNum(num) {
-    return num.toString().split("").reverse().join("")
-  }
+  // function ReverseNum(num) {
+  //   return num.toString().split("").reverse().join("")
+  // }
 
-  console.log("Reverse Number",ReverseNum(23243));
+  // console.log("Reverse Number",ReverseNum(23243));
+
+  // 19: reverse a number
+  // function REverse(num) {
+  //   let rev = 0;
+  //   while (num > 0) {
+  //     let rem = num % 10;
+  //     rev = rev * 10 + rem;
+  //     num = Math.floor(num / 10);
+  //   }
+  //   return rev;
+  // }
+
+  // console.log(REverse(1234));
+
+  // 20: Palindrome
+  // function Palindrome(str) {
+  //   var reverse = str.split("").reverse().join("");
+  //   if (reverse === str) {
+  //     return "Palindrome";
+  //   } else {
+  //     return "Not a palindrome";
+  //   }
+  // }
+
+  // console.log(Palindrome("212"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div>

@@ -130,7 +130,26 @@ const DsaPractice = () => {
   // }
   // console.log(CheckArray([]), CheckArray({}));
 
- 
+  // 15:empty an array
+  // let emp = [ 1,2,3,4,5];
+  // console.log(emp.splice());
+
+  // 16: num is integar or not
+  // function Number(num) {
+  //   if (num % 1 === 0) {
+  //     return "integar";
+  //   } else {
+  //     return "Not a number";
+  //   }
+  // }
+
+  // console.log(Number("24324"));
+
+  // 17: duplicate the given number 
+  // function Duplicate(arr){
+  //   console.log(arr.concat(arr));
+  // }
+  // Duplicate(["hello","hii"]);
 
 
 

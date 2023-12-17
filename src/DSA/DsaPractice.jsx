@@ -183,22 +183,21 @@ const DsaPractice = () => {
 
   // console.log(Palindrome("212"));
 
+  // 21: make a first letter capital
+  // function Alpha(str){
+  //   let alpha = str.charAt(0).toUpperCase();
+  //   return alpha + str.slice(1)
+  // }
 
+  // console.log(Alpha("aastha"));
 
+  // 22: split the string in letters
+  // function Charac(str){
+  //   return str.split("").sort().join()
 
+  // }
 
-
-
-
-
-
-
-
-
-
-
-
-
+  // console.log(Charac("Aastha"));
 
   return (
     <div>

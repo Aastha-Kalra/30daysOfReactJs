@@ -249,7 +249,45 @@ const DsaPractice = () => {
 
 
 
+  //27: remove which don't have male gender
+  // let arrr = [
+  //   {
+  //     name: "Aastha",
+  //     gender: "Female",
+  //   },
+  //   {
+  //     name: "pasta",
+  //     gender: "male",
+  //   },
+  //   {
+  //     name: "Boss",
+  //     gender: "male",
+  //   },
+  //   {
+  //     name: "Preeti",
+  //     gender: "Female",
+  //   },
+  // ];
 
+  // arrr.forEach(function (ele) {
+  //   if (ele.gender === "male") {
+  //    console.log( ele.name)
+  //   } else {
+  //     return "";
+  //   }
+  // });
+
+  // clone array
+  // function Clone(arr){
+  //   return [...arr]
+  // }
+
+  // var newArray = Clone([1,2,3,4]);
+  // console.log("NewArray", newArray);
+  // console.log(  newArray.pop());
+  // console.log(newArray);
+
+  // we can also do it by map and foreach function
 
 
 

@@ -247,8 +247,6 @@ const DsaPractice = () => {
   // });
   // console.log("add only numbers", sum);
 
-
-
   //27: remove which don't have male gender
   // let arrr = [
   //   {
@@ -289,41 +287,28 @@ const DsaPractice = () => {
 
   // we can also do it by map and foreach function
 
+  // 28:get the first element of array
+  // function firstEle(arr, n = 1) {
+  //  if(n<=arr.length){
+  //   for (let i = 0; i < n; i++) {
+  //     console.log(arr[i]); 
+  //   }
+  //  }
+  //  else{
+  //   console.log(n+" to elements hi nhi h");
+  //  }
+  // }
 
+  // console.log(firstEle([1, 2, 3, 4],6));
 
+  // 28:get the last element of array
+// function LastEle(arr, n=10){
+//   for(let i=n;i<arr.length;i++){
+//     console.log(arr[i]);
+//   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// }
+// console.log(LastEle([1,2,3,4,5,6],4));
 
 
 

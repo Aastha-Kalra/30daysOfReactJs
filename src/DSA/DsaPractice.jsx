@@ -291,7 +291,7 @@ const DsaPractice = () => {
   // function firstEle(arr, n = 1) {
   //  if(n<=arr.length){
   //   for (let i = 0; i < n; i++) {
-  //     console.log(arr[i]); 
+  //     console.log(arr[i]);
   //   }
   //  }
   //  else{
@@ -302,24 +302,37 @@ const DsaPractice = () => {
   // console.log(firstEle([1, 2, 3, 4],6));
 
   // 28:get the last element of array
-// function LastEle(arr, n=10){
-//   for(let i=n;i<arr.length;i++){
-//     console.log(arr[i]);
-//   }
+  // function LastEle(arr, n=10){
+  //   for(let i=n;i<arr.length;i++){
+  //     console.log(arr[i]);
+  //   }
 
-// }
-// console.log(LastEle([1,2,3,4,5,6],4));
+  // }
+  // console.log(LastEle([1,2,3,4,5,6],4));
 
+  // 29: shuffle an array
+  // function Shuffle(arr) {
+  //   var len = arr.length;
+  //   while (len > 0) {
+  //     len--;
+  
+  //     var indexToBeChanged = Math.floor(Math.random() * (len + 1));
+  //     var temp = arr[len];
+  //     arr[len] = arr[indexToBeChanged];
+  //     arr[indexToBeChanged] = temp;
+  //   }
+  //   return arr;
+  // }
+  
+  // console.log(Shuffle([1, 2, 3, 4, 5]));
 
+  // 30: union of two arrays
+  // function Union(arg1, arg2){
+  //  return [...new Set(arg1.concat(arg2))]
 
-
-
-
-
-
-
-
-
+  // }
+  // console.log(Union([1,2,3],[10,2,1,100,3]));
+  
   return (
     <div>
       <div className="text-white font-bold text-5xl text-center">

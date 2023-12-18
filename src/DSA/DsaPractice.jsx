@@ -199,6 +199,104 @@ const DsaPractice = () => {
 
   // console.log(Charac("Aastha"));
 
+  // 23: type of a argument
+  //  function Arg(arg){
+  //  return typeof(arg)
+  //  }
+  // console.log(Arg("Aastha"));
+
+  // loops
+
+  // 24: number of occurence of each letter in string
+  // function Occurance(arg) {
+  //   let present = {};
+  //   arg.split("").forEach(function (elem) {
+  //     if (present.hasOwnProperty(elem) === false) {
+  //       present[elem] = 1;
+  //     } else {
+  //       present[elem]++;
+  //     }
+  //   });
+  //   return present;
+  // }
+
+  // console.log(Occurance("Aastha"));
+
+  // 25: Loop an array and sum of all members
+  // var array = [1, 2, 3, 4, 5, 6];
+  // var sum = 0;
+  // for(let i=0;i<array.length;i++){
+  //   sum = sum+array[i];
+  // }
+  // console.log("sum of array",sum);
+
+  // we can also do it by foreach loop
+
+  // array.forEach(function (elem) {
+  //   sum += elem;
+  // });
+  // console.log(sum);
+
+  //26: add only which are not string
+  // let array = ["2", 4, 5, "1", "6", "9", 6, 7];
+  // let sum = 0;
+  // array.forEach(function (ele) {
+  //   if (typeof ele === "number") {
+  //     sum += ele;
+  //   }
+  // });
+  // console.log("add only numbers", sum);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div>
       <div className="text-white font-bold text-5xl text-center">

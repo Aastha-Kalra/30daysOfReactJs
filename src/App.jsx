@@ -15,6 +15,7 @@ import NewYear from "./components/NewYear";
 import QRcode from "./components/qr/QRCode";
 import Dictionary from "./components/Dictionary/Dictionary";
 import InputSubmission from "./components/InputSubmission";
+import TicTacToe from "./DSA/TicTacToe/TicTacToe";
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
    {/* <NewYear/> */}
   {/* <QRcode/> */}
   {/* <Dictionary/> */}
-  <InputSubmission/>
+  {/* <InputSubmission/> */}
+  <TicTacToe/>
     </div>
   );
 }

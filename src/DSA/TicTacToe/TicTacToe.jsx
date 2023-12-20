@@ -6,7 +6,7 @@ const TicTacToe = () => {
   const Win_CONDITIONS = [
     [0,1,2],
     [0,3,6],
-    [0,4,8]   
+    [0,4,8],   
     [1,4,7],
     [2,5,8],
     [2,4,6],
@@ -28,9 +28,20 @@ const TicTacToe = () => {
       }
     });
     setBoard(updatedBoard);
+    checkWin(updatedBoard)
     setXplaying(!xplaying);
   };
+  const checkWin=(board)=>{
+    for(let i=0;i<Win_CONDITIONS.length;i++){
+      const [x,y,z] = Win_CONDITIONS[i];
+      if(board[x] && board[x]===board[y] && board[y]===board[z]){
+        console.log(board[x])
+        return board[x]
+       
+      }
+    }
 
+  }
 
   return (
     <div className="text-white px-44 flex flex-col justify-center items-center">

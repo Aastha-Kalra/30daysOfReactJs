@@ -8,7 +8,7 @@ const Board = ({board, onClick}) => {
     <div className='grid grid-cols-3 gap-4 '>
       {
         board.map((value, index)=>{
-            return  <Box  value={value} onClick={()=>onClick(index)}/>
+            return  <Box  value={value} onClick={()=> value=== null &&  onClick(index)}/>
         })
       }
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Board from "./Board";
 import ScoreBoard from "./ScoreBoard";
 import PlayAgain from "./PlayAgain";
+import ResetGame from "./ResetGame";
 
 const TicTacToe = () => {
   const Win_CONDITIONS = [
@@ -60,6 +61,12 @@ const TicTacToe = () => {
     setGameOver(false); 
     setBoard(Array(9).fill(null));
   };
+  const ResetGame = () => {
+    setWinner(false);
+    setGameOver(false); 
+    setScores({xScore:0,oScore:0})
+    setBoard(Array(9).fill(null));
+  };
 
   return (
     <div className="text-white px-44 flex flex-col justify-center items-center">
@@ -73,8 +80,10 @@ const TicTacToe = () => {
           <PlayAgain playAgain={playAgain} />
         </>
       ) : (
+        <>
         <Board board={board} onClick={handleClick} />
-        
+        <ResetGame ResetGame={ResetGame}/>
+        </>
       )}
     </div>
   );

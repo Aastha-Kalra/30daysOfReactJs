@@ -61,7 +61,8 @@ const TicTacToe = () => {
     setGameOver(false); 
     setBoard(Array(9).fill(null));
   };
-  const ResetGame = () => {
+
+  const resetGame = () => {
     setWinner(false);
     setGameOver(false); 
     setScores({xScore:0,oScore:0})
@@ -82,7 +83,7 @@ const TicTacToe = () => {
       ) : (
         <>
         <Board board={board} onClick={handleClick} />
-        <ResetGame ResetGame={ResetGame}/>
+        <ResetGame resetGame={resetGame}/>
         </>
       )}
     </div>

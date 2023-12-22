@@ -71,7 +71,7 @@ const TicTacToe = () => {
 
   return (
     <div className="text-white px-44 flex flex-col justify-center items-center">
-      <div className="text-white">TicTacToe</div>
+      <div className="text-white/90 text-4xl font-bold ">Tic-Tac-Toe</div>
       <ScoreBoard scores={scores} xplaying={xplaying} />
       {winner ? (
         <>

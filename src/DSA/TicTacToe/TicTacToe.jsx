@@ -57,8 +57,7 @@ const TicTacToe = () => {
 
   const playAgain = () => {
     setWinner(false);
-    setGameOver(false);
-    setScores({ xScore: 0, oScore: 0 });
+    setGameOver(false); 
     setBoard(Array(9).fill(null));
   };
 
@@ -75,6 +74,7 @@ const TicTacToe = () => {
         </>
       ) : (
         <Board board={board} onClick={handleClick} />
+        
       )}
     </div>
   );

@@ -339,6 +339,21 @@ const DsaPractice = () => {
   // .indexOf(ele)!==i)
   // console.log("duplicated elements are......",duplicated);
 
+    // 32: bubble sort in array
+    let a = [2,4,3,8,5,6];
+    let swapped;
+   do{
+    swapped = false
+    for(let i=0;i<a.length;i++){
+      if(a[i]>a[i+1]){
+        let temp=a[i+1]
+        a[i+1] = a[i]
+        a[i]= temp
+        swapped=true
+       console.log(a);
+      }
+    }
+   }while(swapped)
 
   
   

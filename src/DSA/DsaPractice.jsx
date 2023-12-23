@@ -332,6 +332,15 @@ const DsaPractice = () => {
 
   // }
   // console.log(Union([1,2,3],[10,2,1,100,3]));
+
+  // 31: duplicate number in array
+  // let arrr = [1,2,4,3,2,3,6];
+  // let duplicated = arrr.filter((ele, i, arr)=>arr
+  // .indexOf(ele)!==i)
+  // console.log("duplicated elements are......",duplicated);
+
+
+  
   
   return (
     <div>

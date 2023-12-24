@@ -367,10 +367,30 @@ const DsaPractice = () => {
 
 
 
-  // 34 : clicked in reactjs
-  
+  // 34 : clicked in reactjs  
   // return <button data-testid="button" style={{margin:"10px"}} onClick={console.log("Clicked!")} >Click me!</button>
 
+  // 35 : state mismatch
+  // const [count, setCount] = useState(0);
+
+	// return (
+	// 	<>
+	// 		<div className="card">{count}</div>
+	// 		<button
+	// 			id="increment"
+	// 			data-testid="incrementBtn"
+	// 			onClick={()=>{
+	// const newCount = count + 1;
+  //   setCount(newCount);
+  //   console.log(`newCount: ${newCount}`);
+	// 			}}
+	// 		>
+	// 			Increment
+	// 		</button>
+	// 	</>
+	// )
+
+  
 
 
 

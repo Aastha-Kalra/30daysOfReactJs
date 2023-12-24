@@ -367,11 +367,13 @@ const DsaPractice = () => {
 
 
 
-  // 34 : 
-
-
-
+  // 34 : clicked in reactjs
   
+  // return <button data-testid="button" style={{margin:"10px"}} onClick={console.log("Clicked!")} >Click me!</button>
+
+
+
+
   return (
     <div>
       <div className="text-white font-bold text-5xl text-center">

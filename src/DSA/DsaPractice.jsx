@@ -340,22 +340,37 @@ const DsaPractice = () => {
   // console.log("duplicated elements are......",duplicated);
 
     // 32: bubble sort in array
-    let a = [2,4,3,8,5,6];
-    let swapped;
-   do{
-    swapped = false
-    for(let i=0;i<a.length;i++){
-      if(a[i]>a[i+1]){
-        let temp=a[i+1]
-        a[i+1] = a[i]
-        a[i]= temp
-        swapped=true
-       console.log(a);
-      }
-    }
-   }while(swapped)
+  //   let a = [2,4,3,8,5,6];
+  //   let swapped;
+  //  do{
+  //   swapped = false
+  //   for(let i=0;i<a.length;i++){
+  //     if(a[i]>a[i+1]){
+  //       let temp=a[i+1]
+  //       a[i+1] = a[i]
+  //       a[i]= temp
+  //       swapped=true
+  //      console.log(a);
+  //     }
+  //   }
+  //  }while(swapped)
 
-  
+  // 33:  hover count in reactjs
+  // const [hoverCount, setHoverCount] = useState(0);
+
+	// return (
+	// 	<div style={{padding:"10px"}}>
+	// 		<button data-testid="button" onMouseEnter={()=>setHoverCount(hoverCount+1)}>Hover Me</button>
+	// 		<h1 data-testid="count"  >{hoverCount}</h1>
+	// 	</div>
+	// )
+
+
+
+  // 34 : 
+
+
+
   
   return (
     <div>

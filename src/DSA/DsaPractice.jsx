@@ -390,7 +390,34 @@ const DsaPractice = () => {
 	// 	</>
 	// )
 
-  
+  // 36: count characters
+  // const [count, setCount] = useState(0)
+	// const [input, setInput] = useState('')
+	// const handleCount = (text) => {
+	// 	return text.length
+	// }
+
+	// const handleInput = (e) => {
+	// 	const newText = e.target.value
+	// 	setInput(newText)
+	// 	setCount(handleCount(newText))
+	// }
+	// return (
+	// 	<>
+	// 		<h1>Character Counter</h1>
+	// 		<textarea
+	// 			name=""
+	// 			value={input}
+	// 			onChange={handleInput}
+	// 			id="textInput"
+	// 			cols="30"
+	// 			rows="10"
+	// 		></textarea>
+	// 		<br /> <br />
+	// 		<div id="count">{count}</div>
+	// 	</>
+	// )
+
 
 
 

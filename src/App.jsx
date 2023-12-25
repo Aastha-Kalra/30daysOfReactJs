@@ -16,6 +16,7 @@ import QRcode from "./components/qr/QRCode";
 import Dictionary from "./components/Dictionary/Dictionary";
 import InputSubmission from "./components/InputSubmission";
 import TicTacToe from "./DSA/TicTacToe/TicTacToe";
+import Timer from "./components/Timer";
 
 function App() {
   return (
@@ -29,13 +30,14 @@ function App() {
       {/* <LetterCalculator/> */}
       {/* <RandomNumber/> */}
       {/* <CountryCapital/> */}
-   {/* <DsaPractice/> */}
+   <DsaPractice/>
    {/* <Pexels/> */}
    {/* <NewYear/> */}
   {/* <QRcode/> */}
   {/* <Dictionary/> */}
   {/* <InputSubmission/> */}
-  <TicTacToe/>
+  {/* <TicTacToe/> */}
+  <Timer/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function simpleInterestCal() {
+export default function SimpleInterestCal() {
   const [principal, setPrincipal] = useState(1000);
   const [rate, setRate] = useState(10);
   const [time, setTime] = useState(10);

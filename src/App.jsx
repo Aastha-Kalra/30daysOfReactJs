@@ -17,6 +17,7 @@ import Dictionary from "./components/Dictionary/Dictionary";
 import InputSubmission from "./components/InputSubmission";
 import TicTacToe from "./DSA/TicTacToe/TicTacToe";
 import Timer from "./components/Timer";
+import SimpleInterestCal from './components/SimpleInterestCal'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
   {/* <InputSubmission/> */}
   {/* <TicTacToe/> */}
   <Timer/>
+<SimpleInterestCal/>
     </div>
   );
 }

@@ -18,6 +18,7 @@ import InputSubmission from "./components/InputSubmission";
 import TicTacToe from "./DSA/TicTacToe/TicTacToe";
 import Timer from "./components/Timer";
 import SimpleInterestCal from './components/SimpleInterestCal'
+import PollComponent from './components/VoteCount'
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
   {/* <TicTacToe/> */}
   <Timer/>
 <SimpleInterestCal/>
+<PollComponent/>
     </div>
   );
 }

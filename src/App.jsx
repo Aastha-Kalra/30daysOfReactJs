@@ -42,8 +42,8 @@ function App() {
   {/* <TicTacToe/> */}
   {/* <Timer/> */}
 {/* <SimpleInterestCal/> */}
-<PollComponent/>
-{/* <Calender/> */}
+{/* <PollComponent/> */}
+<Calender/>
     </div>
   );
 }

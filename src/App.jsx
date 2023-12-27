@@ -19,6 +19,7 @@ import TicTacToe from "./DSA/TicTacToe/TicTacToe";
 import Timer from "./components/Timer";
 import SimpleInterestCal from './components/SimpleInterestCal'
 import PollComponent from './components/VoteCount'
+import Calender from "./components/Cal";
 
 function App() {
   return (
@@ -32,16 +33,17 @@ function App() {
       {/* <LetterCalculator/> */}
       {/* <RandomNumber/> */}
       {/* <CountryCapital/> */}
-   <DsaPractice/>
+   {/* <DsaPractice/> */}
    {/* <Pexels/> */}
    {/* <NewYear/> */}
   {/* <QRcode/> */}
   {/* <Dictionary/> */}
   {/* <InputSubmission/> */}
   {/* <TicTacToe/> */}
-  <Timer/>
-<SimpleInterestCal/>
+  {/* <Timer/> */}
+{/* <SimpleInterestCal/> */}
 <PollComponent/>
+{/* <Calender/> */}
     </div>
   );
 }

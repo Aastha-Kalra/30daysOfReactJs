@@ -315,7 +315,7 @@ const DsaPractice = () => {
   //   var len = arr.length;
   //   while (len > 0) {
   //     len--;
-  
+
   //     var indexToBeChanged = Math.floor(Math.random() * (len + 1));
   //     var temp = arr[len];
   //     arr[len] = arr[indexToBeChanged];
@@ -323,7 +323,7 @@ const DsaPractice = () => {
   //   }
   //   return arr;
   // }
-  
+
   // console.log(Shuffle([1, 2, 3, 4, 5]));
 
   // 30: union of two arrays
@@ -339,7 +339,7 @@ const DsaPractice = () => {
   // .indexOf(ele)!==i)
   // console.log("duplicated elements are......",duplicated);
 
-    // 32: bubble sort in array
+  // 32: bubble sort in array
   //   let a = [2,4,3,8,5,6];
   //   let swapped;
   //  do{
@@ -358,88 +358,98 @@ const DsaPractice = () => {
   // 33:  hover count in reactjs
   // const [hoverCount, setHoverCount] = useState(0);
 
-	// return (
-	// 	<div style={{padding:"10px"}}>
-	// 		<button data-testid="button" onMouseEnter={()=>setHoverCount(hoverCount+1)}>Hover Me</button>
-	// 		<h1 data-testid="count"  >{hoverCount}</h1>
-	// 	</div>
-	// )
+  // return (
+  // 	<div style={{padding:"10px"}}>
+  // 		<button data-testid="button" onMouseEnter={()=>setHoverCount(hoverCount+1)}>Hover Me</button>
+  // 		<h1 data-testid="count"  >{hoverCount}</h1>
+  // 	</div>
+  // )
 
-
-
-  // 34 : clicked in reactjs  
+  // 34 : clicked in reactjs
   // return <button data-testid="button" style={{margin:"10px"}} onClick={console.log("Clicked!")} >Click me!</button>
 
   // 35 : state mismatch
   // const [count, setCount] = useState(0);
 
-	// return (
-	// 	<>
-	// 		<div className="card">{count}</div>
-	// 		<button
-	// 			id="increment"
-	// 			data-testid="incrementBtn"
-	// 			onClick={()=>{
-	// const newCount = count + 1;
+  // return (
+  // 	<>
+  // 		<div className="card">{count}</div>
+  // 		<button
+  // 			id="increment"
+  // 			data-testid="incrementBtn"
+  // 			onClick={()=>{
+  // const newCount = count + 1;
   //   setCount(newCount);
   //   console.log(`newCount: ${newCount}`);
-	// 			}}
-	// 		>
-	// 			Increment
-	// 		</button>
-	// 	</>
-	// )
+  // 			}}
+  // 		>
+  // 			Increment
+  // 		</button>
+  // 	</>
+  // )
 
   // 36: count characters
   // const [count, setCount] = useState(0)
-	// const [input, setInput] = useState('')
-	// const handleCount = (text) => {
-	// 	return text.length
-	// }
+  // const [input, setInput] = useState('')
+  // const handleCount = (text) => {
+  // 	return text.length
+  // }
 
-	// const handleInput = (e) => {
-	// 	const newText = e.target.value
-	// 	setInput(newText)
-	// 	setCount(handleCount(newText))
-	// }
-	// return (
-	// 	<>
-	// 		<h1>Character Counter</h1>
-	// 		<textarea
-	// 			name=""
-	// 			value={input}
-	// 			onChange={handleInput}
-	// 			id="textInput"
-	// 			cols="30"
-	// 			rows="10"
-	// 		></textarea>
-	// 		<br /> <br />
-	// 		<div id="count">{count}</div>
-	// 	</>
-	// )
+  // const handleInput = (e) => {
+  // 	const newText = e.target.value
+  // 	setInput(newText)
+  // 	setCount(handleCount(newText))
+  // }
+  // return (
+  // 	<>
+  // 		<h1>Character Counter</h1>
+  // 		<textarea
+  // 			name=""
+  // 			value={input}
+  // 			onChange={handleInput}
+  // 			id="textInput"
+  // 			cols="30"
+  // 			rows="10"
+  // 		></textarea>
+  // 		<br /> <br />
+  // 		<div id="count">{count}</div>
+  // 	</>
+  // )
 
-  // 39: missing number from array 
-  function getMissingNo(a, n) {
-  
-    let total = Math.floor((n + 1) * (n + 2) / 2);
-    for (let i = 0; i < n; i++)
-        total -= a[i];
-    return total;
-}
+  // 39: missing number from array
+  //   function getMissingNo(a, n) {
 
-// Driver Code
+  //     let total = Math.floor((n + 1) * (n + 2) / 2);
+  //     for (let i = 0; i < n; i++)
+  //         total -= a[i];
+  //     return total;
+  // }
 
-let arr1 = [ 1, 2, 3, 5 ];
-let N = arr.length;
-let miss = getMissingNo(arr1, N);
-console.log(miss);
+  // // Driver Code
+
+  // let arr1 = [ 1, 2, 3, 5 ];
+  // let N = arr.length;
+  // let miss = getMissingNo(arr1, N);
+  // console.log(miss);
+
+  // 40: duplicate in array
+  // let arr1 = [1,2,2,1,3,4,1,4]
+  // let duplicate = arr1.filter((ele,i,arr)=>arr.indexOf(ele)!== i)
+  // console.log("Duplication",duplicate);
+
+  // 41: max in array
+  let arr1 = [1, 3, 95, 67, 8, 9];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] > arr1[i+1]) {
+      let temp = arr1[i + 1];
+      arr1[i+1] = arr1[i];
+      arr[i] = temp;
+      console.log("max is ", arr1[i]); 
+    }
+  }
 
 
-
-
-
-
-  
+  //42: min in array
 
 
   return (

@@ -20,6 +20,7 @@ import Timer from "./components/Timer";
 import SimpleInterestCal from './components/SimpleInterestCal'
 import PollComponent from './components/VoteCount'
 import Calender from "./components/Cal";
+import Today from "./components/today";
 
 function App() {
   return (
@@ -43,7 +44,8 @@ function App() {
   {/* <Timer/> */}
 {/* <SimpleInterestCal/> */}
 {/* <PollComponent/> */}
-<Calender/>
+{/* <Calender/> */}
+<Today/>
     </div>
   );
 }

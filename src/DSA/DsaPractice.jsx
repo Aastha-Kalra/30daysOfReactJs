@@ -438,19 +438,25 @@ const DsaPractice = () => {
   // console.log("Duplication",duplicate);
 
   // 41: max in array
-  let arr1 = [1, 3, 95, 67, 8, 9];
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] > arr1[i+1]) {
-      let temp = arr1[i + 1];
-      arr1[i+1] = arr1[i];
-      arr[i] = temp;
-      console.log("max is ", arr1[i]); 
-    }
-  }
-
+  // let arr1 = [1, 3, 95, 67, 8, 9];
+  // for (let i = 0; i < arr1.length; i++) {
+  //   if (arr1[i] > arr1[i+1]) {
+  //     let temp = arr1[i + 1];
+  //     arr1[i+1] = arr1[i];
+  //     arr[i] = temp;
+  //     console.log("max is ", arr1[i]);
+  //   }
+  // }
 
   //42: min in array
-
+  let arr1 = [0, 1, 3, 95, 67, 8, 9];
+  let min = arr1[0];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] < min) {
+      return (min = arr1[i]);
+    }
+    console.log("min is ", min);
+  }
 
   return (
     <div>

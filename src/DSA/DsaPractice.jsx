@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const DsaPractice = () => {
   // 1: sum of all natural numbers from 1 to n
@@ -418,7 +418,28 @@ const DsaPractice = () => {
 	// 	</>
 	// )
 
+  // 39: missing number from array 
+  function getMissingNo(a, n) {
+  
+    let total = Math.floor((n + 1) * (n + 2) / 2);
+    for (let i = 0; i < n; i++)
+        total -= a[i];
+    return total;
+}
 
+// Driver Code
+
+let arr1 = [ 1, 2, 3, 5 ];
+let N = arr.length;
+let miss = getMissingNo(arr1, N);
+console.log(miss);
+
+
+
+
+
+
+  
 
 
   return (

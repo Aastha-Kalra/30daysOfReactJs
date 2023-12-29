@@ -22,6 +22,7 @@ import PollComponent from './components/VoteCount'
 import Calender from "./components/Cal";
 import Today from "./components/today";
 import CharacterCount from "./components/CharacterCount";
+import Rating from "./components/Rating";
 
 function App() {
   return (
@@ -47,7 +48,8 @@ function App() {
 {/* <PollComponent/> */}
 {/* <Calender/> */}
 {/* <Today/> */}
-<CharacterCount/>
+{/* <CharacterCount/> */}
+<Rating/>
     </div>
   );
 }

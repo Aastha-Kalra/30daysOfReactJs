@@ -21,6 +21,7 @@ import SimpleInterestCal from './components/SimpleInterestCal'
 import PollComponent from './components/VoteCount'
 import Calender from "./components/Cal";
 import Today from "./components/today";
+import CharacterCount from "./components/CharacterCount";
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
 {/* <SimpleInterestCal/> */}
 {/* <PollComponent/> */}
 {/* <Calender/> */}
-<Today/>
+{/* <Today/> */}
+<CharacterCount/>
     </div>
   );
 }

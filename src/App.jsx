@@ -23,6 +23,7 @@ import Calender from "./components/Cal";
 import Today from "./components/today";
 import CharacterCount from "./components/CharacterCount";
 import Rating from "./components/Rating";
+import Tip from "./components/TipCalculator";
 
 function App() {
   return (
@@ -49,7 +50,8 @@ function App() {
 {/* <Calender/> */}
 {/* <Today/> */}
 {/* <CharacterCount/> */}
-<Rating/>
+{/* <Rating/> */}
+<Tip/>
     </div>
   );
 }

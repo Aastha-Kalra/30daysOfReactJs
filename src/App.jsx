@@ -24,6 +24,7 @@ import Today from "./components/today";
 import CharacterCount from "./components/CharacterCount";
 import Rating from "./components/Rating";
 import Tip from "./components/TipCalculator";
+import DistanceConverter from "./components/DistanceConverter";
 
 function App() {
   return (
@@ -51,7 +52,8 @@ function App() {
 {/* <Today/> */}
 {/* <CharacterCount/> */}
 {/* <Rating/> */}
-<Tip/>
+{/* <Tip/> */}
+<DistanceConverter/>
     </div>
   );
 }

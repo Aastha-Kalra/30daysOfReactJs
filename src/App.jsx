@@ -25,6 +25,7 @@ import CharacterCount from "./components/CharacterCount";
 import Rating from "./components/Rating";
 import Tip from "./components/TipCalculator";
 import DistanceConverter from "./components/DistanceConverter";
+import Tabs from "./components/Tab";
 
 function App() {
   return (
@@ -53,7 +54,8 @@ function App() {
 {/* <CharacterCount/> */}
 {/* <Rating/> */}
 {/* <Tip/> */}
-<DistanceConverter/>
+{/* <DistanceConverter/> */}
+<Tabs/>
     </div>
   );
 }

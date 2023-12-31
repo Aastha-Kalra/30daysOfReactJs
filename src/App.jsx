@@ -27,6 +27,7 @@ import Tip from "./components/TipCalculator";
 import DistanceConverter from "./components/DistanceConverter";
 import Tabs from "./components/Tab";
 import Table from "./components/Table";
+import RandomPalette from "./components/RandomPalette";
 
 function App() {
   return (
@@ -57,7 +58,8 @@ function App() {
 {/* <Tip/> */}
 {/* <DistanceConverter/> */}
 {/* <Tabs/> */}
-<Table/>
+{/* <Table/> */}
+<RandomPalette/>
     </div>
   );
 }

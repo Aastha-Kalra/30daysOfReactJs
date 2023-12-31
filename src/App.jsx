@@ -26,6 +26,7 @@ import Rating from "./components/Rating";
 import Tip from "./components/TipCalculator";
 import DistanceConverter from "./components/DistanceConverter";
 import Tabs from "./components/Tab";
+import Table from "./components/Table";
 
 function App() {
   return (
@@ -55,7 +56,8 @@ function App() {
 {/* <Rating/> */}
 {/* <Tip/> */}
 {/* <DistanceConverter/> */}
-<Tabs/>
+{/* <Tabs/> */}
+<Table/>
     </div>
   );
 }

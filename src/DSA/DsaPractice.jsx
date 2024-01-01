@@ -467,12 +467,20 @@ const DsaPractice = () => {
 
 
 // 44: reverse a string
- function str(s){
-  return s.reverse()
+//  function str(s){
+//   return s.reverse()
+// }
+
+// console.log(str(['a','a','s','t','h','a']));
+
+
+// 45 : valid anagram 
+function Anagram(s,t){
+  return s.split().sort().join("")== t.split().sort().join("")
+
 }
 
-console.log(str(['a','a','s','t','h','a']));
-
+console.log(Anagram('anagram', 'nagaram'));
 
   return (
     <div>

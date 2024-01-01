@@ -449,14 +449,22 @@ const DsaPractice = () => {
   // }
 
   //42: min in array
-  let arr1 = [0, 1, 3, 95, 67, 8, 9];
-  let min = arr1[0];
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] < min) {
-      return (min = arr1[i]);
-    }
-    console.log("min is ", min);
-  }
+  // let arr1 = [0, 1, 3, 95, 67, 8, 9];
+  // let min = arr1[0];
+  // for (let i = 0; i < arr1.length; i++) {
+  //   if (arr1[i] < min) {
+  //     return (min = arr1[i]);
+  //   }
+  //   console.log("min is ", min);
+  // }
+
+  // 43: find the index of the first occurence in string....
+ var str = function(haystack , needle){
+  return haystack.indexOf(needle);
+ }
+
+ console.log(str("sadbutsad", "sad"));
+
 
   return (
     <div>

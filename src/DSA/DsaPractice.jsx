@@ -459,11 +459,19 @@ const DsaPractice = () => {
   // }
 
   // 43: find the index of the first occurence in string....
- var str = function(haystack , needle){
-  return haystack.indexOf(needle);
- }
+//  var str = function(haystack , needle){
+//   return haystack.indexOf(needle);
+//  }
 
- console.log(str("sadbutsad", "sad"));
+//  console.log(str("sadbutsad", "sad"));
+
+
+// 44: reverse a string
+ function str(s){
+  return s.reverse()
+}
+
+console.log(str(['a','a','s','t','h','a']));
 
 
   return (

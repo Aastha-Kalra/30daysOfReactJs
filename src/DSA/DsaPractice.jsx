@@ -483,34 +483,53 @@ const DsaPractice = () => {
 // console.log(Anagram('anagram', 'nagaram'));
 
 // 46: longest common prefixx in string 
-function longestCommonPrefix(strs) {
-  if (strs.length === 0) {
-      return "";
+// function longestCommonPrefix(strs) {
+//   if (strs.length === 0) {
+//       return "";
+//   }
+
+//   let prefix = strs[0];
+
+//   for (let i = 1; i < strs.length; i++) {
+//       let j = 0;
+//       while (j < prefix.length && j < strs[i].length && prefix[j] === strs[i][j]) {
+//           j++;
+//       }
+
+//       prefix = prefix.substring(0, j);
+
+//       if (prefix === "") {
+//           break;
+//       }
+//   }
+
+//   return prefix;
+// }
+
+// // Example usage:
+// const strings = ["flower", "flow", "flight"];
+// const commonPrefix = longestCommonPrefix(strings);
+// console.log(commonPrefix); // Output: "fl"
+
+
+// 47: Merge two strings alternatively 
+function Merge(str1, str2){
+  let ans =""; 
+  let i=0;
+  let m = str1.length
+   let n = str2.length
+  while(i<m || i<n){
+    if(i<m){
+      ans += m[i]
+    }
+    if(i<n){
+      ans += n[i]
+    }
   }
-
-  let prefix = strs[0];
-
-  for (let i = 1; i < strs.length; i++) {
-      let j = 0;
-      while (j < prefix.length && j < strs[i].length && prefix[j] === strs[i][j]) {
-          j++;
-      }
-
-      prefix = prefix.substring(0, j);
-
-      if (prefix === "") {
-          break;
-      }
-  }
-
-  return prefix;
+  return ans;
 }
 
-// Example usage:
-const strings = ["flower", "flow", "flight"];
-const commonPrefix = longestCommonPrefix(strings);
-console.log(commonPrefix); // Output: "fl"
-
+console.log(Merge("abc","pqr"));
 
 
   return (

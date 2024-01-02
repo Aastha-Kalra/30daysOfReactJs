@@ -513,23 +513,33 @@ const DsaPractice = () => {
 
 
 // 47: Merge two strings alternatively 
-function Merge(str1, str2){
-  let ans =""; 
-  let i=0;
-  let m = str1.length
-   let n = str2.length
-  while(i<m || i<n){
-    if(i<m){
-      ans += m[i]
-    }
-    if(i<n){
-      ans += n[i]
-    }
-  }
-  return ans;
+// function Merge(str1, str2){
+//   let ans =""; 
+//   let i=0;
+//   let m = str1.length
+//    let n = str2.length
+//   while(i<m || i<n){
+//     if(i<m){
+//       ans += m[i]
+//     }
+//     if(i<n){
+//       ans += n[i]
+//     }
+//   }
+//   return ans;
+// }
+
+// console.log(Merge("abc","pqr"));
+
+
+
+// 48: count length of last word in string 
+function Count(s){
+  return s.trimEnd().split(" ").at(-1).length;
 }
 
-console.log(Merge("abc","pqr"));
+console.log(Count("Aastha Kalra"));
+
 
 
   return (

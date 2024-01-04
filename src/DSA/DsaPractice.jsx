@@ -534,11 +534,11 @@ const DsaPractice = () => {
 
 
 // 48: count length of last word in string 
-function Count(s){
-  return s.trimEnd().split(" ").at(-1).length;
-}
+// function Count(s){
+//   return s.trimEnd().split(" ").at(-1).length;
+// }
 
-console.log(Count("Aastha Kalra"));
+// console.log(Count("Aastha Kalra"));
 
 
 

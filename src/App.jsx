@@ -31,6 +31,7 @@ import RandomPalette from "./components/RandomPalette";
 import Recursion from "./DSA/Recursion/Recursion";
 import Calculator from "./components/Calculator";
 import DaysUntilElement from "./components/DaysUntilElement";
+import Local from "./components/LocalStorage";
 
 function App() {
   return (
@@ -63,9 +64,10 @@ function App() {
 {/* <Tabs/> */}
 {/* <Table/> */}
 {/* <RandomPalette/> */}
-<Calculator/>
-<DaysUntilElement/>
-{/* <Recursion/> */}
+{/* <Calculator/>
+<DaysUntilElement/> */}
+{/* <Local/> */}
+<Recursion/>
     </div>
   );
 }

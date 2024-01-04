@@ -33,7 +33,33 @@
 // }
 // console.log(Sum([1,2,3,4,5,3,4,54,6],6));
 
+// 3: Multiplication of array
+// function Mul(arr){
+//   if(arr.length===0){
+//     return 1;
+//   }
+//   else{
+//     return arr[arr.length-1]* Mul(arr.slice(0,arr.length-1))
+//   }
 
+// }
+// console.log("Mul of array",Mul([1,2,3,4]));
+
+// 4: Fibonaaci series
+// function Fibonacci(n) {
+//   // if(n==0){
+//   //   return 0;
+//   // }
+//   // else if(n==1){
+//   //   return 1;
+//   // }
+//   if (n < 2) {
+//     return n;
+//   } else {
+//     return Fibonacci(n - 1) + Fibonacci(n - 2);
+//   }
+// }
+// console.log("Fibonacci ", Fibonacci(7));
 
 
 const Recursion = () => {

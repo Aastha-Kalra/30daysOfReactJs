@@ -61,6 +61,25 @@
 // }
 // console.log("Fibonacci ", Fibonacci(7));
 
+// 5: Binary search
+const BinarySearch = (arr, target) => {
+  arr.sort((a, b) => a - b);
+  let start = 0,
+    end = arr.length - 1;
+  while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
+    if (arr[mid] === target) {
+      return mid;
+    } else if (arr[mid] > target) {
+      end = mid - 1;
+    } else {
+      start = mid + 1;
+    }
+  }
+  return -1;
+};
+
+console.log(BinarySearch([1, 6, 7, 32, 76], 1));
 
 const Recursion = () => {
   return <div className="text-white text-4xl">Recursion Practice</div>;

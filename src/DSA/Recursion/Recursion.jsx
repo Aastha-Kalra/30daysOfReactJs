@@ -62,24 +62,52 @@
 // console.log("Fibonacci ", Fibonacci(7));
 
 // 5: Binary search
-const BinarySearch = (arr, target) => {
-  arr.sort((a, b) => a - b);
+// const BinarySearch = (arr, target) => {
+//   arr.sort((a, b) => a - b);
+//   let start = 0,
+//     end = arr.length - 1;
+//   while (start <= end) {
+//     let mid = Math.floor((start + end) / 2);
+//     if (arr[mid] === target) {
+//       return mid;
+//     } else if (arr[mid] > target) {
+//       end = mid - 1;
+//     } else {
+//       start = mid + 1;
+//     }
+//   }
+//   return -1;
+// };
+
+// console.log(BinarySearch([1, 6, 7, 32, 76], 1));
+
+// 6: floor and ceil value of x
+function FloorCeil(arr, target) {
   let start = 0,
     end = arr.length - 1;
-  while (start <= end) {
+  let floor = -1,
+    ceil = -1;
+  while (start < end) {
     let mid = Math.floor((start + end) / 2);
     if (arr[mid] === target) {
-      return mid;
+      floor = mid;
+      ceil = mid;
+      return [floor, ceil];
     } else if (arr[mid] > target) {
+      ceil = mid;
       end = mid - 1;
+      
     } else {
+      floor = mid;
       start = mid + 1;
     }
   }
-  return -1;
-};
+  return -1
+}
+console.log("floorCeil",FloorCeil([1,2,5,7,8],7));
 
-console.log(BinarySearch([1, 6, 7, 32, 76], 1));
+
+
 
 const Recursion = () => {
   return <div className="text-white text-4xl">Recursion Practice</div>;

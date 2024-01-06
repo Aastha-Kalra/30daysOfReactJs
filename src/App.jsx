@@ -32,6 +32,7 @@ import Recursion from "./DSA/Recursion/Recursion";
 import Calculator from "./components/Calculator";
 import DaysUntilElement from "./components/DaysUntilElement";
 import Local from "./components/LocalStorage";
+import Sorting from "./DSA/Sorting";
 
 function App() {
   return (
@@ -67,7 +68,8 @@ function App() {
 {/* <Calculator/>
 <DaysUntilElement/> */}
 {/* <Local/> */}
-<Recursion/>
+{/* <Recursion/> */}
+<Sorting/>
     </div>
   );
 }

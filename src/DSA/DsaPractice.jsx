@@ -576,6 +576,18 @@ const DsaPractice = () => {
 
 
 
+//51 :  combined array 
+// const company = "Nike"
+// const tagline = "Just do it"
+
+// const combinedArray = [company, tagline]
+// combinedArray.forEach(
+// 	(el,index) => console.log(`Index : ${index}: ${el}`)
+// );
+
+
+
+
 
 
 

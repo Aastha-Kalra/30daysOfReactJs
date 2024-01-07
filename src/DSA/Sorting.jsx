@@ -37,22 +37,58 @@
 
 
 // Insertion Sort 
-const InsertionSort = (arr)=>{
-  for(let i=1;i<arr.length;i++){
-    let current = arr[i]
-    let j = i-1;
-    while(j>=0 && arr[j]> current){
-      arr[j+1]= arr[j];
-      j--;
-    }
-    arr[j+1]= current
+// const InsertionSort = (arr)=>{
+//   for(let i=1;i<arr.length;i++){
+//     let current = arr[i]
+//     let j = i-1;
+//     while(j>=0 && arr[j]> current){
+//       arr[j+1]= arr[j];
+//       j--;
+//     }
+//     arr[j+1]= current
     
+//   }
+//   return arr;
+// }
+// console.log("Insertion sort",InsertionSort([12,23,41,65,67,4,2]));
+
+
+// Merge sort 
+function mergeSort(array) {
+  if (array.length <= 1) {
+    return array;
   }
-  return arr;
+
+  const middle = Math.floor(array.length / 2);
+  const leftHalf = array.slice(0, middle);
+  const rightHalf = array.slice(middle);
+
+  return merge(mergeSort(leftHalf), mergeSort(rightHalf));
 }
-console.log("Insertion sort",InsertionSort([12,23,41,65,67,4,2]));
 
+function merge(left, right) {
+  let result = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
 
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  // Add remaining elements from both arrays
+  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+
+// Example usage:
+const unsortedArray = [8, 3, 5, 1, 7, 6, 4, 2];
+const sortedArray = mergeSort(unsortedArray);
+console.log("Merge sort ",sortedArray);
 
 
 

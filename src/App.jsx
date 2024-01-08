@@ -33,7 +33,7 @@ import Calculator from "./components/Calculator";
 import DaysUntilElement from "./components/DaysUntilElement";
 import Local from "./components/LocalStorage";
 import Sorting from "./DSA/Sorting";
-
+import updateTemplateLiteral from './components/TemplateLiterals';
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden">
@@ -69,7 +69,8 @@ function App() {
 <DaysUntilElement/> */}
 {/* <Local/> */}
 {/* <Recursion/> */}
-<Sorting/>
+<updateTemplateLiteral/>
+{/* <Sorting/> */}
     </div>
   );
 }

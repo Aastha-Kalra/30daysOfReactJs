@@ -587,6 +587,16 @@ const DsaPractice = () => {
 
 
 
+// Create your functions here
+// const addNumbers = (a, b) => {
+// 	return a + b
+// }
+// const multiplyNumbers = (a, b) => {
+// 	return a * b
+// }
+
+// export default multiplyNumbers
+// export { addNumbers }
 
 
 

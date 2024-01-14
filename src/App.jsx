@@ -33,7 +33,8 @@ import Calculator from "./components/Calculator";
 import DaysUntilElement from "./components/DaysUntilElement";
 import Local from "./components/LocalStorage";
 import Sorting from "./DSA/Sorting";
-import updateTemplateLiteral from './components/TemplateLiterals';
+// import updateTemplateLiteral from './components/TemplateLiterals';
+import Question1 from './React-Assessments/Question1/Question1'
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden">
@@ -69,8 +70,9 @@ function App() {
 <DaysUntilElement/> */}
 {/* <Local/> */}
 {/* <Recursion/> */}
-<updateTemplateLiteral/>
+{/* <updateTemplateLiteral/> */}
 {/* <Sorting/> */}
+<Question1/>
     </div>
   );
 }

@@ -39,6 +39,7 @@ import Question2 from './React-Assessments/Question2/Question2'
 import Question3 from './React-Assessments/Question3/Question3'
 import Counter from "./components/ReactCounterBug";
 import Toggle from './components/Toggle'
+import TemperatureConverter from "./components/TemperatureCon";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden">
@@ -80,7 +81,8 @@ function App() {
 {/* <Question2/> */}
 {/* <Question3/> */}
 {/* <Counter/> */}
-<Toggle/>
+{/* <Toggle/> */}
+<TemperatureConverter/>
     </div>
   );
 }

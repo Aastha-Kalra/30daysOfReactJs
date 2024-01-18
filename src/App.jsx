@@ -41,6 +41,7 @@ import Counter from "./components/ReactCounterBug";
 import Toggle from './components/Toggle'
 import TemperatureConverter from "./components/TemperatureCon";
 import MessageFeed from "./components/SubmitMessages";
+import SignUpForm from "./components/ValidateSignUp";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden">
@@ -84,7 +85,8 @@ function App() {
 {/* <Counter/> */}
 {/* <Toggle/> */}
 {/* <TemperatureConverter/> */}
-<MessageFeed/>
+{/* <MessageFeed/> */}
+<SignUpForm/>
     </div>
   );
 }

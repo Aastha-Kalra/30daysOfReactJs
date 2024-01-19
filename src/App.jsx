@@ -44,9 +44,10 @@ import Question3 from './React-Assessments/Question3/Question3'
 // import SignUpForm from "./components/ValidateSignUp";
 // import CVCreator from "./components/CVCreator";
 import SearchFilter from "./React-Assessments/Question4/SearchFilter"; 
+import ImageSlider from "./React-Assessments/Question5/ImageSlider";
 function App() {
   return (
-    <div className="bg-black min-h-screen w-full overflow-hidden">
+    <div className="bg-black min-h-screen w-full overflow-hidden text-green-500 p-4">
       {/* <SearchFilter/> */}
       {/* <ItemsPerPage/> */}
       {/* <ColorPicker/> */}
@@ -90,7 +91,8 @@ function App() {
 {/* <MessageFeed/> */}
 {/* <SignUpForm/> */}
 {/* <CVCreator/> */}
-<SearchFilter/>
+{/* <SearchFilter/> */}
+<ImageSlider/>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { React } from "react";
-import SearchFilter from "./components/SearchFilter";
+// import SearchFilter from "./components/SearchFilter";
 import ItemsPerPage from "./components/ItemsPerPage";
 import ColorPicker from "./components/ColorPicker";
 import Responsive from "./components/Responsive";
@@ -37,12 +37,13 @@ import Sorting from "./DSA/Sorting";
 import Question1 from './React-Assessments/Question1/Question1'
 import Question2 from './React-Assessments/Question2/Question2'
 import Question3 from './React-Assessments/Question3/Question3'
-import Counter from "./components/ReactCounterBug";
-import Toggle from './components/Toggle'
-import TemperatureConverter from "./components/TemperatureCon";
-import MessageFeed from "./components/SubmitMessages";
-import SignUpForm from "./components/ValidateSignUp";
-import CVCreator from "./components/CVCreator";
+// import Counter from "./components/ReactCounterBug";
+// import Toggle from './components/Toggle'
+// import TemperatureConverter from "./components/TemperatureCon";
+// import MessageFeed from "./components/SubmitMessages";
+// import SignUpForm from "./components/ValidateSignUp";
+// import CVCreator from "./components/CVCreator";
+import SearchFilter from "./React-Assessments/Question4/SearchFilter"; 
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden">
@@ -88,7 +89,8 @@ function App() {
 {/* <TemperatureConverter/> */}
 {/* <MessageFeed/> */}
 {/* <SignUpForm/> */}
-<CVCreator/>
+{/* <CVCreator/> */}
+<SearchFilter/>
     </div>
   );
 }

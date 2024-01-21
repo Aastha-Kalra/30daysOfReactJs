@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useRef } from "react";
 
 const SearchResult = ({ filtered }) => {
   return (
@@ -7,11 +7,24 @@ const SearchResult = ({ filtered }) => {
         const HexCode = item.symbol.codePointAt(0).toString(16);
         const src = `//cdn.jsdelivr.net/emojione/assets/png/${HexCode}.png`;
 
+        const passwordRef = useRef();
+        const copytoClipboard = useCallback(() => {
+          passwordRef.current?.select();
+          window.navigator.clipboard.writeText(src);
+        }, [src]);
+
         return (
           <div
             className="bg-white/5 p-14 text-center items-center flex flex-col text-2xl gap-3 rounded"
             key={item.title}
           >
+            <label
+              htmlFor=""
+              className="cursor-pointer"
+              onClick={copytoClipboard}
+            >
+              copy
+            </label>
             <img src={src} alt={item.title} />
             <p>{item.title}</p>
           </div>

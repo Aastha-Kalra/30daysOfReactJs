@@ -46,6 +46,7 @@ import Question3 from './React-Assessments/Question3/Question3'
 import SearchFilter from "./React-Assessments/Question4/SearchFilter"; 
 import ImageSlider from "./React-Assessments/Question5/ImageSlider";
 import EmojiSearch from "./React-Assessments/Emoji/EmojiSearch";
+import Joke from "./React-Assessments/Joke/Joke";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500 p-4">
@@ -94,7 +95,8 @@ function App() {
 {/* <CVCreator/> */}
 {/* <SearchFilter/> */}
 {/* <ImageSlider/> */}
-<EmojiSearch/>
+{/* <EmojiSearch/> */}
+<Joke/>
     </div>
   );
 }

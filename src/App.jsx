@@ -50,6 +50,7 @@ import Joke from "./React-Assessments/Joke/Joke";
 import TextEditorApp from "./React-Assessments/TextEditorApp/TextEditorApp";
 import MaxCount from "./React-Assessments/MaxCount/MaxCount";
 import RemoveSpecificButton from "./React-Assessments/Debugging/RemoveSpecificButton";
+import UnnecessaryFunctionCall from "./React-Assessments/Debugging/FunctionCall";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500 p-4">
@@ -102,7 +103,8 @@ function App() {
 {/* <Joke/> */}
 {/* <TextEditorApp/> */}
 {/* <MaxCount/> */}
-<RemoveSpecificButton/>
+{/* <RemoveSpecificButton/> */}
+<UnnecessaryFunctionCall/>
     </div>
   );
 }

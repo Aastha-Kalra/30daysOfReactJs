@@ -52,6 +52,7 @@ import MaxCount from "./React-Assessments/MaxCount/MaxCount";
 import RemoveSpecificButton from "./React-Assessments/Debugging/RemoveSpecificButton";
 import UnnecessaryFunctionCall from "./React-Assessments/Debugging/FunctionCall";
 import CalculateFactorial from "./React-Assessments/Debugging/ReRender";
+import CountInputChanges from "./React-Assessments/Debugging/InfiniteRendering";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500 p-4">
@@ -106,7 +107,8 @@ function App() {
 {/* <MaxCount/> */}
 {/* <RemoveSpecificButton/> */}
 {/* <UnnecessaryFunctionCall/> */}
-<CalculateFactorial/>
+{/* <CalculateFactorial/> */}
+<CountInputChanges/>
     </div>
   );
 }

@@ -54,6 +54,7 @@ import UnnecessaryFunctionCall from "./React-Assessments/Debugging/FunctionCall"
 import CalculateFactorial from "./React-Assessments/Debugging/ReRender";
 import CountInputChanges from "./React-Assessments/Debugging/InfiniteRendering";
 import Theme from "./React-Assessments/Debugging/ThemeContext";
+import PageBottom from "./React-Assessments/CustomHooks/UsePageBottom";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500 p-4">
@@ -110,7 +111,8 @@ function App() {
 {/* <UnnecessaryFunctionCall/> */}
 {/* <CalculateFactorial/> */}
 {/* <CountInputChanges/> */}
-<Theme/>
+{/* <Theme/> */}
+<PageBottom/>
     </div>
   );
 }

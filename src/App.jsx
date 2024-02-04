@@ -55,6 +55,9 @@ import CalculateFactorial from "./React-Assessments/Debugging/ReRender";
 import CountInputChanges from "./React-Assessments/Debugging/InfiniteRendering";
 import Theme from "./React-Assessments/Debugging/ThemeContext";
 import PageBottom from "./React-Assessments/CustomHooks/UsePageBottom";
+import UseWindowDimensions from "./React-Assessments/CustomHooks/UseWindowDimensions";
+import UseFetch from "./React-Assessments/CustomHooks/UseFetch";
+import Main from "./React-Assessments/LazyLoading/Main";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500 p-4">
@@ -112,7 +115,10 @@ function App() {
 {/* <CalculateFactorial/> */}
 {/* <CountInputChanges/> */}
 {/* <Theme/> */}
-<PageBottom/>
+{/* <PageBottom/> */}
+{/* <UseWindowDimensions/> */}
+{/* <UseFetch/> */}
+<Main/>
     </div>
   );
 }

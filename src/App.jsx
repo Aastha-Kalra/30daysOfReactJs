@@ -58,6 +58,7 @@ import PageBottom from "./React-Assessments/CustomHooks/UsePageBottom";
 import UseWindowDimensions from "./React-Assessments/CustomHooks/UseWindowDimensions";
 import UseFetch from "./React-Assessments/CustomHooks/UseFetch";
 import Main from "./React-Assessments/LazyLoading/Main";
+import ProgressBar from "./React-Assessments/ProgressBar/ProgressBar";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500 p-4">
@@ -118,7 +119,8 @@ function App() {
 {/* <PageBottom/> */}
 {/* <UseWindowDimensions/> */}
 {/* <UseFetch/> */}
-<Main/>
+{/* <Main/> */}
+<ProgressBar/>
     </div>
   );
 }

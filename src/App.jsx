@@ -64,6 +64,7 @@ import Register from "./React-Assessments/UseContextHook.jsx/Register";
 import Login from "./React-Assessments/UseContextHook.jsx/Login";
 import UseReducer from "./React-Assessments/UseReducerHook.jsx/UseReducer";
 import UseLayout from "./React-Assessments/UseLayout";
+import UseMemo from "./React-Assessments/UseMemo";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500 p-4">
@@ -136,7 +137,8 @@ function App() {
       </div> */}
 
       {/* <UseReducer/> */}
-      <UseLayout/>
+      {/* <UseLayout/> */}
+      <UseMemo/>
     </div>
   );
 }

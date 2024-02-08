@@ -12,7 +12,15 @@ const UseMemo = () => {
   useEffect(() => {
     Use();
   }, []);
+  function filterByPrice(getData) {
+    console.log("filter ");
 
+    const filteredItem = getData.filter((item) => item.price > 50);
+    console.log(filteredItem);
+    return filteredItem;
+  }
+
+  const MemoisedfilterByPrice = useMemo(() => filterByPrice(data), [data]);
   return (
     <>
       <div>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaArrowDown } from "react-icons/fa";
 const Body = () => {
   const colors = [
     "#2421b8",
@@ -25,8 +25,11 @@ const Body = () => {
         })}
       </div>
       <div>
-        <button className="bg-sky-600 px-7 py-3 text-white text-lg rounded-md">
+        <button className="bg-sky-600 px-7 py-3 flex justify-center items-center gap-3 text-white text-lg rounded-md">
           Download
+          <span>
+            <FaArrowDown />
+          </span>
         </button>
       </div>
     </div>

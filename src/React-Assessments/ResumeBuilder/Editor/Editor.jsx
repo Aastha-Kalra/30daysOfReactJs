@@ -17,7 +17,7 @@ const Editor = ({ sections }) => {
   };
 
   return (
-    <div className="border-2 h-96 mx-44 rounded-md">
+    <div className="border-2 mx-44 rounded-md">
       <div className="flex justify-center items-center gap-4 text-xl bg-white/10 py-3 shadow-slate-400 ">
         {Object.keys(sections)?.map((key) => (
           <div

@@ -3,6 +3,7 @@ import BasicInfo from "../AllFunctions/BasicInfo";
 import Work from "../AllFunctions/Work";
 import Projects from "../AllFunctions/Projects";
 import Education from "../AllFunctions/Education";
+import Achievement from "../AllFunctions/Achievement";
 
 const Editor = ({ sections }) => {
   const [activeSection, setActiveSection] = useState(Object.keys(sections)[0]);
@@ -13,10 +14,12 @@ const Editor = ({ sections }) => {
         return <BasicInfo />;
       case sections.workExp:
         return <Work />;
-        case sections.projects:
-          return <Projects />;
-          case sections.education:
-            return <Education />;
+      case sections.projects:
+        return <Projects />;
+      case sections.education:
+        return <Education />;
+      case sections.achievements:
+        return <Achievement />;
       default:
         return null;
     }
@@ -45,4 +48,3 @@ const Editor = ({ sections }) => {
 };
 
 export default Editor;
-

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import BasicInfo from "../AllFunctions/BasicInfo";
 import Work from "../AllFunctions/Work";
 import Projects from "../AllFunctions/Projects";
+import Education from "../AllFunctions/Education";
 
 const Editor = ({ sections }) => {
   const [activeSection, setActiveSection] = useState(Object.keys(sections)[0]);
@@ -14,6 +15,8 @@ const Editor = ({ sections }) => {
         return <Work />;
         case sections.projects:
           return <Projects />;
+          case sections.education:
+            return <Education />;
       default:
         return null;
     }

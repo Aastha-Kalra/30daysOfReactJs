@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowDown } from "react-icons/fa";
 import Editor from "../Editor/Editor";
 const Body = () => {
@@ -18,6 +18,38 @@ const Body = () => {
     achievements: "Achievement",
     summary: "Summary",
   };
+  const [resumeInfo,setResumeInfo]=useState({
+    [sections.basicInfo]:{
+      id:sections.basicInfo,
+      title:sections.basicInfo,
+      detail:[]
+    },
+    [sections.workExp]:{
+      id:sections.workExp,
+      title:sections.workExp,
+      detail:[]
+    },
+    [sections.projects]:{
+      id:sections.projects,
+      title:sections.projects,
+      detail:[]
+    },
+    [sections.education]:{
+      id:sections.education,
+      title:sections.education,
+      detail:[]
+    },
+    [sections.achievements]:{
+      id:sections.achievements,
+      title:sections.achievements,
+      detail:[]
+    },
+    [sections.summary]:{
+      id:sections.summary,
+      title:sections.summary,
+      detail:[]
+    }
+  })
   return (
     <>
       <div className="flex justify-between px-6 my-10 items-center gap-4">

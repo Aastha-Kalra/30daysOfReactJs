@@ -42,6 +42,18 @@ const Editor = ({ sections }) => {
           </div>
         ))}
       </div>
+      <div className="flex mx-4 gap-4 my-4">
+        <div className="bg-slate-300 rounded-xl px-3 py-1 text-black">
+          <p>
+            Project 1<span className="mx-3">X</span>
+          </p>
+        </div>
+        <div className="bg-slate-300 rounded-xl px-3 py-1 text-black">
+          <p>
+            Project 2<span className="mx-3">X</span>
+          </p>
+        </div>
+      </div>
       <div>{generateBody()}</div>
     </div>
   );

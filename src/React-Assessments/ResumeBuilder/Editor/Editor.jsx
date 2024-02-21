@@ -44,6 +44,21 @@ const Editor = ({ sections, info }) => {
         ))}
       </div>
       <div className="flex mx-4 gap-4 my-4">
+      {activeInfo?.details
+          ? activeInfo?.details?.map((item, index) => {
+              return (
+                <div
+                  key={item.title + index}
+                  className="bg-slate-300 rounded-xl px-3 py-1 text-black"
+                >
+                  <p>
+                    {sections[activeSection]} {index + 1}
+                    <span className="mx-3">X</span>
+                  </p>
+                </div>
+              );
+            })
+          : ""}
       </div>
       <div>{generateBody()}</div>
     </div>

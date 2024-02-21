@@ -9,6 +9,10 @@ const Editor = ({ sections, info }) => {
   const [activeInfo, setActiveInfo] = useState(
     info[sections[Object.keys(sections)[0]]]
   );
+
+  useEffect(() => {
+    setActiveInfo(info[sections[activeSection]]);
+  }, [activeSection]);
   const generateBody = () => {
     switch (sections[activeSection]) {
       case sections.basicInfo:
@@ -44,7 +48,7 @@ const Editor = ({ sections, info }) => {
         ))}
       </div>
       <div className="flex mx-4 gap-4 my-4">
-      {activeInfo?.details
+        {activeInfo?.details
           ? activeInfo?.details?.map((item, index) => {
               return (
                 <div

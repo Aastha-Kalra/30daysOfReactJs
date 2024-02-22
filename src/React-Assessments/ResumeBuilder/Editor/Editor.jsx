@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
+import InputControl from "../InputControl/InputControl";
 import BasicInfo from "../AllFunctions/BasicInfo";
 import Work from "../AllFunctions/Work";
 import Projects from "../AllFunctions/Projects";
 import Education from "../AllFunctions/Education";
 import Achievement from "../AllFunctions/Achievement";
-import Summary from '../AllFunctions/Summary'
+import Summary from "../AllFunctions/Summary";
 const Editor = ({ sections, info }) => {
   const [activeSection, setActiveSection] = useState(Object.keys(sections)[0]);
   const [activeInfo, setActiveInfo] = useState(
     info[sections[Object.keys(sections)[0]]]
   );
-
+  const [sectionTitle, setSectionTitle] = useState(
+    sections[Object.keys(sections)[1]]
+  );
   useEffect(() => {
     setActiveInfo(info[sections[activeSection]]);
+    setSectionTitle(sections[activeSection]);
   }, [activeSection]);
   const generateBody = () => {
     switch (sections[activeSection]) {
@@ -27,7 +31,7 @@ const Editor = ({ sections, info }) => {
       case sections.achievements:
         return <Achievement />;
       case sections.summary:
-        return <Summary/>
+        return <Summary />;
       default:
         return null;
     }
@@ -50,7 +54,7 @@ const Editor = ({ sections, info }) => {
           </div>
         ))}
       </div>
-      <div className="flex mx-4 gap-4 my-4">
+      <div className="flex mx-4 gap-4">
         {activeInfo?.details
           ? activeInfo?.details?.map((item, index) => {
               return (

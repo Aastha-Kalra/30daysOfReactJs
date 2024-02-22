@@ -4,6 +4,7 @@ import Work from "../AllFunctions/Work";
 import Projects from "../AllFunctions/Projects";
 import Education from "../AllFunctions/Education";
 import Achievement from "../AllFunctions/Achievement";
+import Summary from '../AllFunctions/Summary'
 const Editor = ({ sections, info }) => {
   const [activeSection, setActiveSection] = useState(Object.keys(sections)[0]);
   const [activeInfo, setActiveInfo] = useState(
@@ -25,6 +26,8 @@ const Editor = ({ sections, info }) => {
         return <Education />;
       case sections.achievements:
         return <Achievement />;
+      case sections.summary:
+        return <Summary/>
       default:
         return null;
     }

@@ -9,8 +9,8 @@ const Work = () => {
         <InputControl label="Company Name" placeholder="Enter your company name eg. Microsoft"/>
         <InputControl type="date" label="Start date"/>
         <InputControl type="date" label="End date" />
-       <div className="">
-        <label className="text-xl pl-16">Description</label>
+       <div>
+        <label className="text-2xl font-semibold pl-[68px] ">Description</label>
        <InputControl placeholder="Write about your experience"/>
        <InputControl placeholder="Write about your experience"/>
        </div>

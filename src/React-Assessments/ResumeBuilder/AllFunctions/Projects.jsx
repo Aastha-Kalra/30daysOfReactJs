@@ -8,10 +8,6 @@ const Projects = () => {
         placeholder="Enter Project Title eg. Food App"
       />
       <InputControl
-        label="Title"
-        placeholder="Enter Project Title eg. Food App"
-      />
-      <InputControl
         label="Deployed Link"
         placeholder="Enter Live link of project"
       />

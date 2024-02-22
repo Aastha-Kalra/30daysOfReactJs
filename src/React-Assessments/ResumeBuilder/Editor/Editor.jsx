@@ -54,6 +54,14 @@ const Editor = ({ sections, info }) => {
           </div>
         ))}
       </div>
+      <div className="mt-8">
+        <InputControl
+          label="Section Title"
+          placeholder="Enter Section Title"
+          value={sectionTitle}
+          onchange={(e) => setSectionTitle(e.target.value)}
+        />
+      </div>
       <div className="flex mx-4 gap-4">
         {activeInfo?.details
           ? activeInfo?.details?.map((item, index) => {

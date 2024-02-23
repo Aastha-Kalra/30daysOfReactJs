@@ -5,7 +5,7 @@ const Work = () => {
     <>
       <div>
         <InputControl type="number" label="Work " placeholder="Enter your experience (in years)" />
-        <InputControl  label="Title" placeholder="Enter your Title eg. Frontend Developer"/>
+        <InputControl  label="Position" placeholder="Enter your Position eg. Frontend Developer"/>
         <InputControl label="Company Name" placeholder="Enter your company name eg. Microsoft"/>
         <InputControl type="date" label="Start date"/>
         <InputControl type="date" label="End date" />

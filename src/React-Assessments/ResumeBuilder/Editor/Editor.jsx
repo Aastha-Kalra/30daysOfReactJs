@@ -38,7 +38,7 @@ const Editor = ({ sections, info }) => {
   };
 
   return (
-    <div className="border-2 mx-44 rounded-md">
+    <div className="border-2 mx-44 rounded-md my-4">
       <div className="flex justify-center items-center gap-4 text-xl bg-white/10 py-3 shadow-slate-400 ">
         {Object.keys(sections)?.map((key) => (
           <div
@@ -80,6 +80,9 @@ const Editor = ({ sections, info }) => {
           : ""}
       </div>
       <div>{generateBody()}</div>
+      <div className="
+      flex justify-center items-center w-full my-4"><button className="bg-yellow-600 px-7 py-2 text-2xl font-bold text-green-950 rounded-md">
+      Save</button></div>
     </div>
   );
 };

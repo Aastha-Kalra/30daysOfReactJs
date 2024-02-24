@@ -52,7 +52,7 @@ const Body = () => {
   });
   return (
     <>
-      <div className="flex justify-between px-6 my-10 items-center gap-4">
+      <div className="flex justify-between px-6 my-10 items-center gap-4 py-4">
         <div className="flex gap-2">
           {colors.map((item) => {
             return (
@@ -75,8 +75,10 @@ const Body = () => {
           </button>
         </div>
       </div>
-
-      <Editor sections={sections} info={resumeInfo} />
+<div className="p-14">
+  
+<Editor sections={sections} info={resumeInfo} />
+</div>
     </>
   );
 };

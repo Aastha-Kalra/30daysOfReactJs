@@ -14,6 +14,14 @@ const Editor = ({ sections, info }) => {
   const [sectionTitle, setSectionTitle] = useState(
     sections[Object.keys(sections)[1]]
   );
+  const [values,setValues]=useState({
+    name:activeInfo?.details?.name || "Aastha Kalra",
+    position:activeInfo?.details?.position || "",
+    linkedin:activeInfo?.details?.linkedin || "",
+    github:activeInfo?.details?.github || "",
+    phone:activeInfo?.details?.phone || "",
+    email:activeInfo?.details?.email || "",
+  })
   useEffect(() => {
     setActiveInfo(info[sections[activeSection]]);
     setSectionTitle(sections[activeSection]);
@@ -21,7 +29,7 @@ const Editor = ({ sections, info }) => {
   const generateBody = () => {
     switch (sections[activeSection]) {
       case sections.basicInfo:
-        return <BasicInfo />;
+        return <BasicInfo  value={values}/>;
       case sections.workExp:
         return <Work />;
       case sections.projects:

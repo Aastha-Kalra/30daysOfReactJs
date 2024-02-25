@@ -16,11 +16,11 @@ const Editor = ({ sections, info }) => {
   );
   const [values,setValues]=useState({
     name:activeInfo?.details?.name || "Aastha Kalra",
-    position:activeInfo?.details?.position || "",
-    linkedin:activeInfo?.details?.linkedin || "",
-    github:activeInfo?.details?.github || "",
-    phone:activeInfo?.details?.phone || "",
-    email:activeInfo?.details?.email || "",
+    position:activeInfo?.details?.position || "Frontend Developer",
+    linkedin:activeInfo?.details?.linkedin || "aasthaKalra9927",
+    github:activeInfo?.details?.github || "github.com/Aastha-Kalra",
+    phone:activeInfo?.details?.phone || "9997758454",
+    email:activeInfo?.details?.email || "ak@gmail.com",
   })
   useEffect(() => {
     setActiveInfo(info[sections[activeSection]]);

@@ -31,7 +31,7 @@ const Editor = ({ sections, info }) => {
       case sections.basicInfo:
         return <BasicInfo  value={values}/>;
       case sections.workExp:
-        return <Work />;
+        return <Work  value={values}/>;
       case sections.projects:
         return <Projects />;
       case sections.education:

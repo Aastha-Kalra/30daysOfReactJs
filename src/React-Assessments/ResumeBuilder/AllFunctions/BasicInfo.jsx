@@ -5,11 +5,11 @@ const BasicInfo = ({value}) => {
   return (
     <div>
     <InputControl label="Name" placeholder="Enter your Name"  defaultValue={value.name}/>
-    <InputControl label="Position" placeholder="Enter your Position eg. Frontend Developer"/>
-    <InputControl label="Linkedin Link" placeholder="Enter your Linkedin profile link "/>
-    <InputControl label="Github Link" placeholder="Enter your Github profile link "/>
-    <InputControl label="Phone Number" placeholder="Enter your Phone number "/>
-    <InputControl label="Email Id " placeholder="Enter your Email Id "/>
+    <InputControl label="Position" placeholder="Enter your Position eg. Frontend Developer" defaultValue={value.position}/>
+    <InputControl label="Linkedin Link" placeholder="Enter your Linkedin profile link " defaultValue={value.linkedin}/>
+    <InputControl label="Github Link" placeholder="Enter your Github profile link " defaultValue={value.github}/>
+    <InputControl label="Phone Number" placeholder="Enter your Phone number " defaultValue={value.phone}/>
+    <InputControl label="Email Id " placeholder="Enter your Email Id " defaultValue={value.email}/>
     </div>
   )
 }

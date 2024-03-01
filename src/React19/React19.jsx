@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
+import Compiler from "./Compiler";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const React19 = () => {
   return (
-    
-    <div className='flex flex-col justify-center items-center text-3xl py-5'>
-    
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Compiler />} path="/" />
+        </Routes>
+      </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
-export default React19
+export default React19;

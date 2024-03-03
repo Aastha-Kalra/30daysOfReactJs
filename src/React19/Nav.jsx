@@ -12,11 +12,17 @@ const Nav = () => {
       <Link className="bg-yellow-500 px-4 py-2" to="/useServerUseClient">
         Use Server Use Cilent
       </Link>
-      <Link className="bg-yellow-500 px-4 py-2" to="/">
-        Compiler
+      <Link className="bg-yellow-500 px-4 py-2" to="/seo">
+        SEO
+      </Link>
+      <Link className="bg-yellow-500 px-4 py-2" to="/suspense">
+        Suspense
+      </Link>
+      <Link className="bg-yellow-500 px-4 py-2" to="/web">
+        Web Components
       </Link>
       <Link className="bg-yellow-500 px-4 py-2" to="/">
-        Compiler
+        Suspense
       </Link>
     </div>
   );

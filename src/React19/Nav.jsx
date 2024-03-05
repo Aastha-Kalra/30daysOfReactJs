@@ -21,8 +21,8 @@ const Nav = () => {
       <Link className="bg-yellow-500 px-4 py-2" to="/web">
         Web Components
       </Link>
-      <Link className="bg-yellow-500 px-4 py-2" to="/">
-        Suspense
+      <Link className="bg-yellow-500 px-4 py-2" to="/ref">
+        ref
       </Link>
     </div>
   );

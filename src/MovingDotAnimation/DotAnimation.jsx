@@ -14,6 +14,12 @@ const DotAnimation = () => {
         });
       }}
     >
+      <div
+        className={`w-1 h-1 shadow -top-2 -left-2 shadow-red-500 bg-yellow-500 rounded-full absolute`}
+        style={{
+          transform: `translate(${coordinates.x}px, ${coordinates.y}px)`,
+        }}
+      ></div>
     </div>
   );
 };

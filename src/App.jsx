@@ -68,9 +68,10 @@ import UseMemo from "./React-Assessments/UseMemo";
 import UseCallback from "./React-Assessments/UseCallback/UseCallback";
 import ResumeBuild from "./React-Assessments/ResumeBuilder/ResumeBuild";
 import React19 from "./React19/React19";
+import DotAnimation from "./MovingDotAnimation/DotAnimation";
 function App() {
   return (
-    <div className="bg-black min-h-screen w-full overflow-hidden text-green-500 p-4">
+    <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
       {/* <SearchFilter/> */}
       {/* <ItemsPerPage/> */}
       {/* <ColorPicker/> */}
@@ -144,7 +145,8 @@ function App() {
       {/* <UseMemo/> */}
       {/* <UseCallback/> */}
      {/* <ResumeBuild/> */}
-     <React19/>
+     {/* <React19/> */}
+     <DotAnimation/>
     </div>
   );
 }

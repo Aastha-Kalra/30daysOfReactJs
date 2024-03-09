@@ -69,8 +69,6 @@ import UseCallback from "./React-Assessments/UseCallback/UseCallback";
 import ResumeBuild from "./React-Assessments/ResumeBuilder/ResumeBuild";
 import React19 from "./React19/React19";
 import DotAnimation from "./MovingDotAnimation/DotAnimation";
-import RoomReservation from "./RoomReservation/RoomReservation";
-import RoomBook from "./RoomReservation/RoomReservation";
 import RoomBooking from "./RoomReservation/RoomBooking";
 function App() {
   return (

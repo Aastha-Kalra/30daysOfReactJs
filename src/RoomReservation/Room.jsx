@@ -18,7 +18,7 @@ const Room = React.memo(({ room, onroomClick, credits }) => {
   return (
     <div
       className={`mt-6 ${status.toLowerCase()} ${
-        room.isReserved ? "reserved" : ""
+        room.isReserved ? "bg-green-600" : ""
       }  justify-end items-end flex shadow-md shadow-orange-500`}
       onClick={BookRoom}
     >

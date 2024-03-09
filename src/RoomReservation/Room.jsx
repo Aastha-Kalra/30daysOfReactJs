@@ -1,13 +1,43 @@
-import React from "react";
-
-const Room = React.memo(() => {
-  return <div className="w-full h-full p-14">
-    <div className="w-44 h-44 bg-slate-900 p-4 rounded-sm flex flex-col justify-center items-center">
-        <p>R</p>
-        <p>Cost: </p>
-        <p>Status:</p>
+import React, { useState, useEffect } from "react";
+const Room = React.memo(({ room, onroomClick, credits }) => {
+  const [status, setStatus] = useState("");
+  useEffect(() => {
+    if (room.isReserved) {
+      setStatus("#1ce8e4");
+    } else if (room.cost > credits) {
+      setStatus("red");
+    } else {
+      setStatus("#32e232");
+    }
+  }, [room.isReserved, room.cost, credits]);
+  const BookRoom = () => {
+    if (!room.isReserved && room.cost <= credits) {
+      onroomClick(room);
+    }
+  };
+  return (
+    <div
+      className={`mt-6 ${status.toLowerCase()} ${
+        room.isReserved ? "reserved" : ""
+      }  justify-end items-end flex shadow-md shadow-orange-500`}
+      onClick={BookRoom}
+    >
+      <div
+        className={`w-44 h-44 bg-slate-900 p-4 rounded-sm flex flex-col justify-center items-center font-semibold text-md cursor-pointer`}
+      >
+        <p className="text-teal-300">R : {room.id + 1}</p>
+        <p className="text-teal-300">Cost: {room.cost}</p>
+        <p className={`text-center`} style={{ color: status }}>
+          Status:{" "}
+          {room.isReserved
+            ? "Reserved"
+            : room.cost > credits
+            ? "Not enough credits"
+            : "Available"}
+        </p>{" "}
+      </div>
     </div>
-  </div>;
+  );
 });
 
 export default Room;

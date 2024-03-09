@@ -11,6 +11,7 @@ const Sidebar = ({ user, bookedRooms, availableRooms }) => {
         </p>
       </div>
       Available Credits : {user.credits} <br />
+      Available Rooms :{available}
       <div>
         Reserved Rooms :
         <table className="mt-3 border-4 border-orange-500 p-4 w-full">

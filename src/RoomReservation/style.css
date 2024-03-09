@@ -1,0 +1,47 @@
+/* Add your styles here */
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rooms {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.room {
+  width: 150px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.room:hover {
+  background-color: #f0f0f0;
+}
+
+.available {
+  color: #32e232;
+  background-color: rgb(204, 158, 19);
+}
+
+.reserved {
+  background-color: #13b420;
+  color: #1ce8e4;
+}
+
+.notenoughcredits {
+  background-color: lightcoral;
+  color: red;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}

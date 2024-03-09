@@ -22,6 +22,10 @@ const RoomBooking = () => {
     }
   };
 
+  // available rooms
+  const availableRooms = roomData.filter(
+    (room) => !room.isReserved && room.cost <= user.credits
+  );
   return (
     <div className="flex mx-9 my-5 w-full">
       <div className="grid grid-cols-3 gap-6 w-full ">

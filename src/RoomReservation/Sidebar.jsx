@@ -27,7 +27,7 @@ const Sidebar = ({ user, bookedRooms, availableRooms }) => {
                   <td className="border-4 text-center py-2 border-orange-500 ">
                     {room.id + 1}
                   </td>
-                  <td className="border-2 text-center">{room.cost}</td>
+                  <td className="border-2 text-center">$ {room.cost}</td>
                 </tr>
               </tbody>
             );

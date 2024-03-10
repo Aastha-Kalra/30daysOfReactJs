@@ -70,6 +70,7 @@ import ResumeBuild from "./React-Assessments/ResumeBuilder/ResumeBuild";
 import React19 from "./React19/React19";
 import DotAnimation from "./MovingDotAnimation/DotAnimation";
 import RoomBooking from "./RoomReservation/RoomBooking";
+import MainProgress from "./MultipleAnimation/MainProgress";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -148,7 +149,8 @@ function App() {
      {/* <ResumeBuild/> */}
      {/* <React19/> */}
      {/* <DotAnimation/> */}
-<RoomBooking/>
+{/* <RoomBooking/> */}
+<MainProgress/>
     </div>
   );
 }

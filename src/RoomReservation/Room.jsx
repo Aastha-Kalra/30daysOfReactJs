@@ -11,14 +11,17 @@ const Room = React.memo(({ room, onroomClick, credits }) => {
     }
   }, [room.isReserved, room.cost, credits]);
   const BookRoom = () => {
-    if (!room.isReserved && room.cost <= credits) {
-      onroomClick(room);
+    if (room.isReserved) {
+      onroomClick(room); // Unreserve the room
+    } else if (!room.isReserved && room.cost <= credits) {
+      onroomClick(room); // Reserve the room
     }
   };
+
   return (
     <div
       className={`mt-6 ${status.toLowerCase()} ${
-        room.isReserved ? "bg-green-600" : ""
+        room.isReserved ? "bg-green-600" : "bg-slate-600"
       }  justify-end items-end flex shadow-md shadow-orange-500`}
       onClick={BookRoom}
     >

@@ -8,18 +8,30 @@ const RoomBooking = () => {
   const [bookedRooms, setBookedRooms] = useState([]);
   const [roomData, setRoomData] = useState(ROOMS_DATA);
   const handleRoomClick = (room) => {
+    const roomIndex = roomData.findIndex((r) => r.id === room.id);
+    const updatedRoomData = [...roomData];
+    
     if (!room.isReserved && room.cost <= user.credits) {
+      // Reserve the room
+      updatedRoomData[roomIndex] = { ...room, isReserved: true };
+      setBookedRooms((prevRooms) => [...prevRooms, room]);
       setUser((prevUser) => ({
         ...prevUser,
         credits: prevUser.credits - room.cost,
       }));
-      setBookedRooms((prevRooms) => [...prevRooms, room]);
-      setRoomData((prevRooms) =>
-        prevRooms.map((item) =>
-          item.id === room.id ? { ...item, isReserved: true } : item
-        )
+    } else {
+      // Unreserve the room
+      updatedRoomData[roomIndex] = { ...room, isReserved: false };
+      setBookedRooms((prevRooms) =>
+        prevRooms.filter((r) => r.id !== room.id)
       );
+      setUser((prevUser) => ({
+        ...prevUser,
+        credits: prevUser.credits + room.cost,
+      }));
     }
+
+    setRoomData(updatedRoomData);
   };
 
   // available rooms

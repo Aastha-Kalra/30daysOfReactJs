@@ -71,6 +71,7 @@ import React19 from "./React19/React19";
 import DotAnimation from "./MovingDotAnimation/DotAnimation";
 import RoomBooking from "./RoomReservation/RoomBooking";
 import MainProgress from "./MultipleAnimation/MainProgress";
+import TimerProgress from "./TimerProgress/TimerProgress";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -150,7 +151,8 @@ function App() {
      {/* <React19/> */}
      {/* <DotAnimation/> */}
 {/* <RoomBooking/> */}
-<MainProgress/>
+{/* <MainProgress/> */}
+<TimerProgress/>
     </div>
   );
 }

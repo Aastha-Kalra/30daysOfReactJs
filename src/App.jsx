@@ -72,6 +72,7 @@ import DotAnimation from "./MovingDotAnimation/DotAnimation";
 import RoomBooking from "./RoomReservation/RoomBooking";
 import MainProgress from "./MultipleAnimation/MainProgress";
 import TimerProgress from "./TimerProgress/TimerProgress";
+import Input from "./OTP/Input";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -147,12 +148,13 @@ function App() {
       {/* <UseLayout/> */}
       {/* <UseMemo/> */}
       {/* <UseCallback/> */}
-     {/* <ResumeBuild/> */}
-     {/* <React19/> */}
-     {/* <DotAnimation/> */}
-{/* <RoomBooking/> */}
-{/* <MainProgress/> */}
-<TimerProgress/>
+      {/* <ResumeBuild/> */}
+      {/* <React19/> */}
+      {/* <DotAnimation/> */}
+      {/* <RoomBooking/> */}
+      {/* <MainProgress/> */}
+      {/* <TimerProgress/> */}
+      <Input />
     </div>
   );
 }

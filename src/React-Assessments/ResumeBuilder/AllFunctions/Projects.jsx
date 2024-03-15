@@ -11,19 +11,19 @@ const Projects = ({ value }) => {
       <InputControl
         label="Deployed Link"
         placeholder="Enter Live link of project"
-        defaultValue={value.projectName}
+        defaultValue={value.projectLink}
       />
       <InputControl
         label="Github Link"
         placeholder="Enter Github link of project"
-        defaultValue={value.projectName}
+        defaultValue={value.projectGithub}
       />
       <InputControl
         label="Overview"
         placeholder="Line 1"
-        defaultValue={value.projectName}
+        defaultValue={value.projectOverview}
       />
-      <InputControl placeholder="Line 2" defaultValue={value.projectName} />
+      <InputControl placeholder="Line 2" defaultValue={value.projectOverview} />
     </div>
   );
 };

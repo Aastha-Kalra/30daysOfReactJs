@@ -14,28 +14,35 @@ const Editor = ({ sections, info }) => {
   const [sectionTitle, setSectionTitle] = useState(
     sections[Object.keys(sections)[1]]
   );
-  const [values,setValues]=useState({
-    name:activeInfo?.details?.name || "Aastha Kalra",
-    position:activeInfo?.details?.position || "Frontend Developer",
-    linkedin:activeInfo?.details?.linkedin || "aasthaKalra9927",
-    github:activeInfo?.details?.github || "github.com/Aastha-Kalra",
-    phone:activeInfo?.details?.phone || "9997758454",
-    email:activeInfo?.details?.email || "ak@gmail.com",
-  })
+  const [values, setValues] = useState({
+    name: activeInfo?.details?.name || "Aastha Kalra",
+    position: activeInfo?.details?.position || "Frontend Developer",
+    linkedin: activeInfo?.details?.linkedin || "aasthaKalra9927",
+    github: activeInfo?.details?.github || "github.com/Aastha-Kalra",
+    phone: activeInfo?.details?.phone || "9997758454",
+    email: activeInfo?.details?.email || "ak@gmail.com",
+  });
   useEffect(() => {
     setActiveInfo(info[sections[activeSection]]);
     setSectionTitle(sections[activeSection]);
   }, [activeSection]);
+
+  const handleChange = (key, newValue) => {
+    setValues((prev) => ({
+      ...prev,
+      [key]: newValue,
+    }));
+  };
   const generateBody = () => {
     switch (sections[activeSection]) {
       case sections.basicInfo:
-        return <BasicInfo  value={values}/>;
+        return <BasicInfo value={values}  handleChange={handleChange}/>;
       case sections.workExp:
-        return <Work  value={values}/>;
+        return <Work value={values} />;
       case sections.projects:
-        return <Projects value={values}/>;
+        return <Projects value={values} />;
       case sections.education:
-        return <Education value={values}/>;
+        return <Education value={values} />;
       case sections.achievements:
         return <Achievement />;
       case sections.summary:
@@ -88,9 +95,14 @@ const Editor = ({ sections, info }) => {
           : ""}
       </div>
       <div>{generateBody()}</div>
-      <div className="
-      flex justify-center items-center w-full my-4"><button className="bg-yellow-600 px-7 py-2 text-2xl font-bold text-green-950 rounded-md">
-      Save</button></div>
+      <div
+        className="
+      flex justify-center items-center w-full my-4"
+      >
+        <button className="bg-yellow-600 px-7 py-2 text-2xl font-bold text-green-950 rounded-md">
+          Save
+        </button>
+      </div>
     </div>
   );
 };

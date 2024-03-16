@@ -44,7 +44,7 @@ const Editor = ({ sections, info }) => {
       case sections.education:
         return <Education value={values} />;
       case sections.achievements:
-        return <Achievement />;
+        return <Achievement value={values}/>;
       case sections.summary:
         return <Summary />;
       default:

@@ -1,6 +1,6 @@
 import React from 'react'
 import InputControl from '../InputControl/InputControl' 
-const Achievement = () => {
+const Achievement = ({value}) => {
   return (
     <div>
         <InputControl label="Title" placeholder = "Enter the title eg. Reactjs Developer Ceritificate"/>

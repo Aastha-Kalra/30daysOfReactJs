@@ -40,7 +40,7 @@ const Editor = ({ sections, info }) => {
       case sections.workExp:
         return <Work value={values} handleChange={handleChange}/>;
       case sections.projects:
-        return <Projects value={values} />;
+        return <Projects value={values} handleChange={handleChange}/>;
       case sections.education:
         return <Education value={values} />;
       case sections.achievements:

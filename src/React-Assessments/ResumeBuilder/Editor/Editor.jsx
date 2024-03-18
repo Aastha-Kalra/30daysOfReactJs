@@ -42,9 +42,9 @@ const Editor = ({ sections, info }) => {
       case sections.projects:
         return <Projects value={values} handleChange={handleChange}/>;
       case sections.education:
-        return <Education value={values} />;
+        return <Education value={values} handleChange={handleChange}/>;
       case sections.achievements:
-        return <Achievement value={values}/>;
+        return <Achievement value={values} />;
       case sections.summary:
         return <Summary value={values}/>;
       default:

@@ -46,7 +46,7 @@ const Editor = ({ sections, info }) => {
       case sections.achievements:
         return <Achievement value={values} handleChange={handleChange}/>;
       case sections.summary:
-        return <Summary value={values}/>;
+        return <Summary value={values} handleChange={handleChange}/>;
       default:
         return null;
     }

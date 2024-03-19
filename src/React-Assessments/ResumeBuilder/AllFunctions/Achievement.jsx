@@ -6,14 +6,19 @@ const Achievement = ({ value, handleChange }) => {
       <InputControl
         label="Title"
         placeholder="Enter the title eg. Reactjs Developer Ceritificate"
-        defaultVzlue={value.title}
-        onchange={(e) => handleChange("title", e.target.value)}
+        defaultValue={value.achievementTitle}
+        onchange={(e) => handleChange("achievementTitle", e.target.value)}
       />
-      <InputControl label="Description" placeholder="Line 1 " />
+      <InputControl
+        label="Description"
+        placeholder="Line 1 "
+        defaultValue={value.achievementDescription1}
+        onchange={(e) => handleChange("achievementDescription1", e.target.value)}
+      />
       <InputControl
         placeholder="Line 2 "
-        defaultVzlue={value.description}
-        onchange={(e) => handleChange("description", e.target.value)}
+        defaultValue={value.achievementDescription2}
+        onchange={(e) => handleChange("achievementDescription2", e.target.value)}
       />
     </div>
   );

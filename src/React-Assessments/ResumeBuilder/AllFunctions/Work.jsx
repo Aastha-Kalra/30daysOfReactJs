@@ -14,8 +14,8 @@ const Work = ({ value, handleChange }) => {
         <InputControl
           label="Position"
           placeholder="Enter your Position eg. Frontend Developer"
-          defaultValue={value.position}
-          onchange={(e)=>handleChange('position', e.target.value)}
+          defaultValue={value.workPosition}
+          onchange={(e)=>handleChange('workPosition', e.target.value)}
         />
         <InputControl
           label="Company Name"
@@ -26,14 +26,14 @@ const Work = ({ value, handleChange }) => {
         <InputControl
           type="date"
           label="Start date"
-          defaultValue={value.startDate}
-          onchange={(e)=>handleChange('startDate', e.target.value)}
+          defaultValue={value.workStartDate}
+          onchange={(e)=>handleChange('workStartDate', e.target.value)}
         />
         <InputControl
           type="date"
           label="End date"
-          defaultValue={value.endDate}
-          onchange={(e)=>handleChange('endDate', e.target.value)}
+          defaultValue={value.workEndDate}
+          onchange={(e)=>handleChange('workEndDate', e.target.value)}
         />
         <div>
           <label className="text-2xl font-semibold pl-[68px] ">
@@ -41,13 +41,13 @@ const Work = ({ value, handleChange }) => {
           </label>
           <InputControl
             placeholder="Write about your experience"
-            defaultValue={value.points ? value.points[0] : ""}
-            onchange={(e)=>handleChange('points[0]', e.target.value)}
+            defaultValue={value.workExp1}
+            onchange={(e)=>handleChange('workExp1', e.target.value)}
           />
           <InputControl
             placeholder="Write about your experience"
-            defaultValue={value.points ? value.points[1] : ""}
-            onchange={(e)=>handleChange('points[1]', e.target.value)}
+            defaultValue={value.workExp2}
+            onchange={(e)=>handleChange('workExp2', e.target.value)}
           />
         </div>
       </div>

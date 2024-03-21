@@ -6,26 +6,26 @@ const Education = ({ value, handleChange }) => {
       <InputControl
         label="Title"
         placeholder="Enter title eg. B.Tech"
-        defaultValue={value.title}
-        onchange={(e) => handleChange("title", e.target.value)}
+        defaultValue={value.eduTitle}
+        onchange={(e) => handleChange("eduTitle", e.target.value)}
       />
       <InputControl
         label="College/School Name"
         placeholder="Enter name of your college/school"
-        defaultValue={value.college}
+        defaultValue={value.collegeName}
         onchange={(e) => handleChange("collegeName", e.target.value)}
       />
       <InputControl
         label="Start Date"
         placeholder="Enter start date of this education"
-        defaultValue={value.startDate}
-        onchange={(e) => handleChange("startDate", e.target.value)}
+        defaultValue={value.eduStartDate}
+        onchange={(e) => handleChange("eduStartDate", e.target.value)}
       />
       <InputControl
         label="End Date"
         placeholder="Enter end date of this education"
-        defaultValue={value.endDate}
-        onchange={(e) => handleChange("endDate", e.target.value)}
+        defaultValue={value.eduEndDate}
+        onchange={(e) => handleChange("eduEndDate", e.target.value)}
       />
     </div>
   );

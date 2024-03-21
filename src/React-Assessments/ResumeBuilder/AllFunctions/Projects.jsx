@@ -18,19 +18,19 @@ const Projects = ({ value, handleChange }) => {
       <InputControl
         label="Github Link"
         placeholder="Enter Github link of project"
-        defaultValue={value.projectGithub}
+        defaultValue={value.projectGithubLink}
         onchange={(e) => handleChange("projectGithubLink", e.target.value)}
       />
       <InputControl
         label="Overview"
         placeholder="Line 1"
-        defaultValue={value.projectOverview}
-        onchange={(e) => handleChange("projectOverview", e.target.value)}
+        defaultValue={value.projectOverview1}
+        onchange={(e) => handleChange("projectOverview1", e.target.value)}
       />
       <InputControl
         placeholder="Line 2"
-        defaultValue={value.projectOverview}
-        onchange={(e) => handleChange("projectOverview", e.target.value)}
+        defaultValue={value.projectOverview2}
+        onchange={(e) => handleChange("projectOverview2", e.target.value)}
       />
     </div>
   );

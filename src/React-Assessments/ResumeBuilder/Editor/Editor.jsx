@@ -17,11 +17,16 @@ const Editor = ({ sections, info }) => {
   const [values, setValues] = useState({
     name: activeInfo?.details?.name || "Aastha Kalra",
     position: activeInfo?.details?.position || "Frontend Developer",
-    linkedin: activeInfo?.details?.linkedin || "aasthaKalra9927",
-    github: activeInfo?.details?.github || "github.com/Aastha-Kalra",
+    linkedinLink: activeInfo?.details?.linkedinLink || "aasthaKalra9927",
+    githubLink: activeInfo?.details?.githubLink || "github.com/Aastha-Kalra",
     phone: activeInfo?.details?.phone || "9997758454",
-    email: activeInfo?.details?.email || "ak@gmail.com",
+    emailId: activeInfo?.details?.emailId || "ak@gmail.com",
   });
+
+  const handleSub = ()=>{
+    console.log(values);
+  }
+
   useEffect(() => {
     setActiveInfo(info[sections[activeSection]]);
     setSectionTitle(sections[activeSection]);
@@ -99,7 +104,7 @@ const Editor = ({ sections, info }) => {
         className="
       flex justify-center items-center w-full my-4"
       >
-        <button className="bg-yellow-600 px-7 py-2 text-2xl font-bold text-green-950 rounded-md">
+        <button className="bg-yellow-600 px-7 py-2 text-2xl font-bold text-green-950 rounded-md" onClick={handleSub}>
           Save
         </button>
       </div>

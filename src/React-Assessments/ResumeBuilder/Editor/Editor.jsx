@@ -23,13 +23,34 @@ const Editor = ({ sections, info }) => {
     emailId: activeInfo?.details?.emailId || "ak@gmail.com",
   });
 
-  const handleSub = ()=>{
+  const handleSub = () => {
     console.log(values);
-  }
+  };
 
   useEffect(() => {
-    setActiveInfo(info[sections[activeSection]]);
+    const activeInfo = info[sections[activeSection]];
+    setActiveInfo(activeInfo);
     setSectionTitle(sections[activeSection]);
+    setValues({
+      name: activeInfo?.details?.name || "Aastha Kalra",
+      overview: activeInfo?.details
+        ? activeInfo.details[0]?.overview || ""
+        : "",
+      link: activeInfo?.details ? activeInfo.details[0]?.link || "" : "",
+      certificationLink: activeInfo?.details
+        ? activeInfo.details[0]?.certificationLink || ""
+        : "",
+      startDate: activeInfo?.details
+        ? activeInfo.details[0]?.startDate || ""
+        : "",
+      title : activeInfo?.details ? activeInfo.details[0]?.title || "" : activeInfo?.details?.title || '',
+      endDate: activeInfo?.details ? activeInfo.details[0]?.endDate || "" : "",
+      position: activeInfo?.details?.position || "Frontend Developer",
+      linkedinLink: activeInfo?.details?.linkedinLink || "aasthaKalra9927",
+      githubLink: activeInfo?.details?.githubLink || "github.com/Aastha-Kalra",
+      phone: activeInfo?.details?.phone || "9997758454",
+      emailId: activeInfo?.details?.emailId || "ak@gmail.com",
+    });
   }, [activeSection]);
 
   const handleChange = (key, newValue) => {
@@ -41,17 +62,17 @@ const Editor = ({ sections, info }) => {
   const generateBody = () => {
     switch (sections[activeSection]) {
       case sections.basicInfo:
-        return <BasicInfo value={values}  handleChange={handleChange}/>;
+        return <BasicInfo value={values} handleChange={handleChange} />;
       case sections.workExp:
-        return <Work value={values} handleChange={handleChange}/>;
+        return <Work value={values} handleChange={handleChange} />;
       case sections.projects:
-        return <Projects value={values} handleChange={handleChange}/>;
+        return <Projects value={values} handleChange={handleChange} />;
       case sections.education:
-        return <Education value={values} handleChange={handleChange}/>;
+        return <Education value={values} handleChange={handleChange} />;
       case sections.achievements:
-        return <Achievement value={values} handleChange={handleChange}/>;
+        return <Achievement value={values} handleChange={handleChange} />;
       case sections.summary:
-        return <Summary value={values} handleChange={handleChange}/>;
+        return <Summary value={values} handleChange={handleChange} />;
       default:
         return null;
     }
@@ -104,7 +125,10 @@ const Editor = ({ sections, info }) => {
         className="
       flex justify-center items-center w-full my-4"
       >
-        <button className="bg-yellow-600 px-7 py-2 text-2xl font-bold text-green-950 rounded-md" onClick={handleSub}>
+        <button
+          className="bg-yellow-600 px-7 py-2 text-2xl font-bold text-green-950 rounded-md"
+          onClick={handleSub}
+        >
           Save
         </button>
       </div>

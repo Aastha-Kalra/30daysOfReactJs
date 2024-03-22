@@ -77,7 +77,7 @@ const Body = () => {
       </div>
 <div className="p-14">
   
-<Editor sections={sections} info={resumeInfo} />
+<Editor sections={sections} info={resumeInfo} setResumeInfo={setResumeInfo} />
 </div>
     </>
   );

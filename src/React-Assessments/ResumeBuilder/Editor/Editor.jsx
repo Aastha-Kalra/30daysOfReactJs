@@ -6,7 +6,7 @@ import Projects from "../AllFunctions/Projects";
 import Education from "../AllFunctions/Education";
 import Achievement from "../AllFunctions/Achievement";
 import Summary from "../AllFunctions/Summary";
-const Editor = ({ sections, info }) => {
+const Editor = ({ sections, info, setResumeInfo }) => {
   const [activeSection, setActiveSection] = useState(Object.keys(sections)[0]);
   const [activeInfo, setActiveInfo] = useState(
     info[sections[Object.keys(sections)[0]]]
@@ -24,7 +24,93 @@ const Editor = ({ sections, info }) => {
   });
 
   const handleSub = () => {
-    console.log(values);
+    switch (sections[activeSection]) {
+      case sections.BasicInfo: {
+        const tempDetails = {
+          name: values.name,
+          position: values.position,
+          linkedinLink: values.linkedinLink,
+          githubLink: values.githubLink,
+          emailId: values.emailId,
+          phone: values.phone,
+        };
+
+        setResumeInfo((prev) => ({
+          ...prev,
+          [sections.basicInfo]: {
+            ...prev[sections.basicInfo],
+            details: tempDetails,
+          },
+        }));
+
+        break;
+      }
+
+      case sections.workExp: {
+        const tempDetails = {
+          certificationLink:values.certificationLink,
+          position: values.position,
+          linkedinLink: values.linkedinLink,
+          githubLink: values.githubLink,
+          emailId: values.emailId,
+          phone: values.phone,
+        };
+
+        setResumeInfo((prev) => ({
+          ...prev,
+          [sections.workExp]: {
+            ...prev[sections.workExp],
+            details: tempDetails,
+          },
+        }));
+
+        break;
+      }
+
+      case sections.BasicInfo: {
+        const tempDetails = {
+          name: values.name,
+          position: values.position,
+          linkedinLink: values.linkedinLink,
+          githubLink: values.githubLink,
+          emailId: values.emailId,
+          phone: values.phone,
+        };
+
+        setResumeInfo((prev) => ({
+          ...prev,
+          [sections.basicInfo]: {
+            ...prev[sections.basicInfo],
+            details: tempDetails,
+          },
+        }));
+
+        break;
+      }
+
+      case sections.BasicInfo: {
+        const tempDetails = {
+          name: values.name,
+          position: values.position,
+          linkedinLink: values.linkedinLink,
+          githubLink: values.githubLink,
+          emailId: values.emailId,
+          phone: values.phone,
+        };
+
+        setResumeInfo((prev) => ({
+          ...prev,
+          [sections.basicInfo]: {
+            ...prev[sections.basicInfo],
+            details: tempDetails,
+          },
+        }));
+
+        break;
+      }
+      default:
+        break;
+    }
   };
 
   useEffect(() => {
@@ -43,9 +129,10 @@ const Editor = ({ sections, info }) => {
       startDate: activeInfo?.details
         ? activeInfo.details[0]?.startDate || ""
         : "",
-      title : activeInfo?.details ? activeInfo.details[0]?.title || "" : activeInfo?.details?.title || '',
       endDate: activeInfo?.details ? activeInfo.details[0]?.endDate || "" : "",
-      position: activeInfo?.details?.position || "Frontend Developer",
+      position: activeInfo?.details
+      ? activeInfo.details[0]?.position || ""
+      : activeInfo?.details?.position || "Frontend Developer",
       linkedinLink: activeInfo?.details?.linkedinLink || "aasthaKalra9927",
       githubLink: activeInfo?.details?.githubLink || "github.com/Aastha-Kalra",
       phone: activeInfo?.details?.phone || "9997758454",

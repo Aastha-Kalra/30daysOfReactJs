@@ -49,59 +49,17 @@ const Editor = ({ sections, info, setResumeInfo }) => {
       case sections.workExp: {
         const tempDetails = {
           certificationLink:values.certificationLink,
-          position: values.position,
-          linkedinLink: values.linkedinLink,
-          githubLink: values.githubLink,
-          emailId: values.emailId,
-          phone: values.phone,
+          workPosition: values.workPosition,
+          experience: values.experience,
+          companyName: values.companyName,
+          workStartDate: values.workStartDate,
+          workEndDate: values.workEndDate,
         };
 
         setResumeInfo((prev) => ({
           ...prev,
           [sections.workExp]: {
             ...prev[sections.workExp],
-            details: tempDetails,
-          },
-        }));
-
-        break;
-      }
-
-      case sections.BasicInfo: {
-        const tempDetails = {
-          name: values.name,
-          position: values.position,
-          linkedinLink: values.linkedinLink,
-          githubLink: values.githubLink,
-          emailId: values.emailId,
-          phone: values.phone,
-        };
-
-        setResumeInfo((prev) => ({
-          ...prev,
-          [sections.basicInfo]: {
-            ...prev[sections.basicInfo],
-            details: tempDetails,
-          },
-        }));
-
-        break;
-      }
-
-      case sections.BasicInfo: {
-        const tempDetails = {
-          name: values.name,
-          position: values.position,
-          linkedinLink: values.linkedinLink,
-          githubLink: values.githubLink,
-          emailId: values.emailId,
-          phone: values.phone,
-        };
-
-        setResumeInfo((prev) => ({
-          ...prev,
-          [sections.basicInfo]: {
-            ...prev[sections.basicInfo],
             details: tempDetails,
           },
         }));
@@ -129,10 +87,17 @@ const Editor = ({ sections, info, setResumeInfo }) => {
       startDate: activeInfo?.details
         ? activeInfo.details[0]?.startDate || ""
         : "",
+      workStartDate: activeInfo?.details
+        ? activeInfo.details[0]?.workStartDate || ""
+        : "",
       endDate: activeInfo?.details ? activeInfo.details[0]?.endDate || "" : "",
+      workEndDate: activeInfo?.details ? activeInfo.details[0]?.workEndDate || "" : "",
       position: activeInfo?.details
       ? activeInfo.details[0]?.position || ""
       : activeInfo?.details?.position || "Frontend Developer",
+      workPosition: activeInfo?.details
+      ? activeInfo.details[0]?.workPosition || ""
+      : activeInfo?.details?.workPosition || "Frontend Developer",
       linkedinLink: activeInfo?.details?.linkedinLink || "aasthaKalra9927",
       githubLink: activeInfo?.details?.githubLink || "github.com/Aastha-Kalra",
       phone: activeInfo?.details?.phone || "9997758454",

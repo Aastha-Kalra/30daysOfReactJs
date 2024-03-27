@@ -73,6 +73,7 @@ import RoomBooking from "./RoomReservation/RoomBooking";
 import MainProgress from "./MultipleAnimation/MainProgress";
 import TimerProgress from "./TimerProgress/TimerProgress";
 import Input from "./OTP/Input";
+import CopyToClipboard from "./Copy/CopyToClipboard";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -154,7 +155,8 @@ function App() {
       {/* <RoomBooking/> */}
       {/* <MainProgress/> */}
       {/* <TimerProgress/> */}
-      <Input />
+      {/* <Input /> */}
+      <CopyToClipboard/>
     </div>
   );
 }

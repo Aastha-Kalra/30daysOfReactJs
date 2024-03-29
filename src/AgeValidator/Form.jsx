@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({onSubmit, error}) => {
+    const [showMsg,setshowMsg]=useState('')
   return (
     <>
       <p>Find out if you are eligible to use our services!</p>
-      <form action="">
+      <form action="" onSubmit={onSubmit}>
         <label htmlFor="">What is your date of birth?</label>
         <input type="date" name="" id="" />
+        {error ? <p>{error}</p>:''}
         <input type="submit" value="Check" />
         <button>Why do we need to know this?</button>
         <p>

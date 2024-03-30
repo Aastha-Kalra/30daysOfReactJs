@@ -11,12 +11,7 @@ const Form = ({ onSubmit, error }) => {
   const handleShowMsg = () => {
     setShowMsg(true);
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(e); // Call the parent component's onSubmit function
-  };
-
+  
   return (
     <>
       <p>Find out if you are eligible to use our services!</p>

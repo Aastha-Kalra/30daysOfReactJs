@@ -75,6 +75,7 @@ import TimerProgress from "./TimerProgress/TimerProgress";
 import Input from "./OTP/Input";
 import CopyToClipboard from "./Copy/CopyToClipboard";
 import UsePrevious from "./UsePrevious/UsePrevious";
+import AgeValidator from "./AgeValidator/AgeValidator";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -158,7 +159,8 @@ function App() {
       {/* <TimerProgress/> */}
       {/* <Input /> */}
       {/* <CopyToClipboard/> */}
-      <UsePrevious/>
+      {/* <UsePrevious/> */}
+      <AgeValidator/>
     </div>
   );
 }

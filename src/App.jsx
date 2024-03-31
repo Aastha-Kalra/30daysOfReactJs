@@ -76,6 +76,9 @@ import Input from "./OTP/Input";
 import CopyToClipboard from "./Copy/CopyToClipboard";
 import UsePrevious from "./UsePrevious/UsePrevious";
 import AgeValidator from "./AgeValidator/AgeValidator";
+import LargestString from "./Javascript/LongestWord";
+import HashTag from "./Javascript/GenerateHash";
+import CountOccu from "./Javascript/CountOccu";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -160,7 +163,10 @@ function App() {
       {/* <Input /> */}
       {/* <CopyToClipboard/> */}
       {/* <UsePrevious/> */}
-      <AgeValidator/>
+      {/* <AgeValidator/> */}
+      {/* <LargestString/> */}
+      {/* <HashTag/> */}
+      <CountOccu/>
     </div>
   );
 }

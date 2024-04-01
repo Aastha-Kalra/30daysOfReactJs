@@ -1,5 +1,8 @@
 const CountOccu = (str, character) => {
-  str = str.toLowerCase();
+
+  // method 1
+
+  {/*str = str.toLowerCase();
   character = character.toLowerCase();
   let count = 0;
   for (let i = 0; i < str.length; i++) {
@@ -8,7 +11,18 @@ const CountOccu = (str, character) => {
       console.log(character);
     }
   }
-  return count;
+return count;*/}
+
+
+  // method 2 
+  const words  = str.split("").reduce((acc,cur)=>{
+    if(cur===character){
+      acc++
+    }
+    return acc
+  },0)
+
+  return words
 };
 
 export default CountOccu;

@@ -79,6 +79,7 @@ import AgeValidator from "./AgeValidator/AgeValidator";
 import LargestString from "./Javascript/LongestWord";
 import HashTag from "./Javascript/GenerateHash";
 import CountOccu from "./Javascript/CountOccu";
+import TriangleType from "./Javascript/TriangleType";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -166,7 +167,8 @@ function App() {
       {/* <AgeValidator/> */}
       {/* <LargestString/> */}
       {/* <HashTag/> */}
-      <CountOccu/>
+      {/* <CountOccu/> */}
+      <TriangleType/>
     </div>
   );
 }

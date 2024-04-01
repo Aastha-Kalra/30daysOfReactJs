@@ -81,6 +81,7 @@ import HashTag from "./Javascript/GenerateHash";
 import CountOccu from "./Javascript/CountOccu";
 import TriangleType from "./Javascript/TriangleType";
 import Sort from "./Javascript/Sort";
+import Palindrome from "./Javascript/Palindrome";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -170,7 +171,8 @@ function App() {
       {/* <HashTag/> */}
       {/* <CountOccu/> */}
       {/* <TriangleType/> */}
-      <Sort/>
+      {/* <Sort/> */}
+      <Palindrome/>
     </div>
   );
 }

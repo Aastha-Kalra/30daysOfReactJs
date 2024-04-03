@@ -83,6 +83,7 @@ import TriangleType from "./Javascript/TriangleType";
 import Sort from "./Javascript/Sort";
 import Palindrome from "./Javascript/Palindrome";
 import FindMax from "./Javascript/FindMax";
+import Factorial from "./Javascript/Factorial";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -174,7 +175,8 @@ function App() {
       {/* <TriangleType/> */}
       {/* <Sort/> */}
       {/* <Palindrome/> */}
-      <FindMax/>
+      {/* <FindMax/> */}
+      <Factorial/>
     </div>
   );
 }

@@ -87,6 +87,7 @@ import Factorial from "./Javascript/Factorial";
 import Average from "./Javascript/Average";
 import ArrayEqual from "./Javascript/ArrayEqual";
 import SumOfNum from "./Javascript/SumOfNum";
+import All from "./Javascript/All";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -182,7 +183,8 @@ function App() {
       {/* <Factorial/> */}
       {/* <Average/> */}
       {/* <ArrayEqual/> */}
-      <SumOfNum/>
+      {/* <SumOfNum/> */}
+      <All/>
     </div>
   );
 }

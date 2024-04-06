@@ -86,6 +86,7 @@ import FindMax from "./Javascript/FindMax";
 import Factorial from "./Javascript/Factorial";
 import Average from "./Javascript/Average";
 import ArrayEqual from "./Javascript/ArrayEqual";
+import SumOfNum from "./Javascript/SumOfNum";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -180,7 +181,8 @@ function App() {
       {/* <FindMax/> */}
       {/* <Factorial/> */}
       {/* <Average/> */}
-      <ArrayEqual/>
+      {/* <ArrayEqual/> */}
+      <SumOfNum/>
     </div>
   );
 }

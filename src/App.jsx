@@ -88,6 +88,7 @@ import Average from "./Javascript/Average";
 import ArrayEqual from "./Javascript/ArrayEqual";
 import SumOfNum from "./Javascript/SumOfNum";
 import All from "./Javascript/All";
+import Duplicate from "./Javascript/Duplicate";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -184,7 +185,8 @@ function App() {
       {/* <Average/> */}
       {/* <ArrayEqual/> */}
       {/* <SumOfNum/> */}
-      <All/>
+      {/* <All/> */}
+      <Duplicate/>
     </div>
   );
 }

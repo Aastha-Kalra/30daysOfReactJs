@@ -89,6 +89,7 @@ import ArrayEqual from "./Javascript/ArrayEqual";
 import SumOfNum from "./Javascript/SumOfNum";
 import All from "./Javascript/All";
 import Duplicate from "./Javascript/Duplicate";
+import Vowel from "./Javascript/Vowel";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -186,7 +187,8 @@ function App() {
       {/* <ArrayEqual/> */}
       {/* <SumOfNum/> */}
       {/* <All/> */}
-      <Duplicate/>
+     {/* <Duplicate/> */}
+      <Vowel/>
     </div>
   );
 }

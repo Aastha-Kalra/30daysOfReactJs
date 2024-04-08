@@ -1,7 +1,8 @@
 const All = () => {
   // ArrayEqual([3,3,3],[3,3,4])
   // Average([4,4])
-//   CountOcc('missisippi' , 's')
+  //   CountOcc('missisippi' , 's')
+  Duplicate([3, 3, 4, 4, 5, 5, 6, 7, 4, 3, 3, 4, 2, 2, 4, 4, 5, 5, 7]);
 };
 // 1.  arrayEqual
 /*const ArrayEqual = (arr1,arr2)=>{
@@ -48,16 +49,15 @@ const All = () => {
 };
 */
 
+// 4 . Duplicate in array
 
-
-
-
-
-
-
-
-
-
+const Duplicate = (arr) => {
+  let newArray = [...new Set(arr)];
+  console.log(newArray);
+  let sort = newArray.sort((a,b)=>a-b)
+  console.log(sort);
+  return sort;
+};
 
 
 export default All;

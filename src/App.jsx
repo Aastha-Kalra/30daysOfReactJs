@@ -90,6 +90,7 @@ import SumOfNum from "./Javascript/SumOfNum";
 import All from "./Javascript/All";
 import Duplicate from "./Javascript/Duplicate";
 import Vowel from "./Javascript/Vowel";
+import PowerOfTwo from "./Javascript/PowerOfTwo";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -188,7 +189,8 @@ function App() {
       {/* <SumOfNum/> */}
       {/* <All/> */}
      {/* <Duplicate/> */}
-      <Vowel/>
+      {/* <Vowel/> */}
+      <PowerOfTwo/>
     </div>
   );
 }

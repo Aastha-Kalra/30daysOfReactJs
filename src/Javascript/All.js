@@ -3,7 +3,9 @@ const All = () => {
   // Average([4,4])
   //   CountOcc('missisippi' , 's')
   // Duplicate([3, 3, 4, 4, 5, 5, 6, 7, 4, 3, 3, 4, 2, 2, 4, 4, 5, 5, 7]);
-  console.log(Factorial(4));
+  // console.log(Factorial(4));
+  console.log(FindMax([5, 6, 74, 8, 3, 4, 5, 6, 7, 8, 9, 10, 44]));
+  console.log(FindMax([-5, -6, -74]));
 };
 // 1.  arrayEqual
 /*const ArrayEqual = (arr1,arr2)=>{
@@ -52,28 +54,41 @@ const All = () => {
 
 // 4 . Duplicate in array
 
-const Duplicate = (arr) => {
-  let newArray = [...new Set(arr)];
-  console.log(newArray);
-  let sort = newArray.sort((a, b) => a - b);
-  console.log(sort);
-  return sort;
-};
+// const Duplicate = (arr) => {
+//   let newArray = [...new Set(arr)];
+//   console.log(newArray);
+//   let sort = newArray.sort((a, b) => a - b);
+//   console.log(sort);
+//   return sort;
+// };
 
 // 5. Factorial of number
 
-const Factorial = (n) => {
-  if (n <= 1) {
-    return n;
-  }
+// const Factorial = (n) => {
+//   if (n <= 1) {
+//     return n;
+//   }
 
-  let fact = 1;
-  for (let i = 1; i <= n; i++) {
-    fact = fact * i;
-  }
-  console.log(fact);
-  return fact;
-};
+//   let fact = 1;
+//   for (let i = 1; i <= n; i++) {
+//     fact = fact * i;
+//   }
+//   console.log(fact);
+//   return fact;
+// };
+
+// 6. FindMax in array
+
+// const FindMax = (arr) => {
+//   let max = arr[0];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// };
+
 
 
 

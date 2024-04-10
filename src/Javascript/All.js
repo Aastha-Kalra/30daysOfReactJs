@@ -4,8 +4,8 @@ const All = () => {
   //   CountOcc('missisippi' , 's')
   // Duplicate([3, 3, 4, 4, 5, 5, 6, 7, 4, 3, 3, 4, 2, 2, 4, 4, 5, 5, 7]);
   // console.log(Factorial(4));
-  console.log(FindMax([5, 6, 74, 8, 3, 4, 5, 6, 7, 8, 9, 10, 44]));
-  console.log(FindMax([-5, -6, -74]));
+  // console.log(FindMax([5, 6, 74, 8, 3, 4, 5, 6, 7, 8, 9, 10, 44]));
+  // console.log(FindMax([-5, -6, -74]));
 };
 // 1.  arrayEqual
 /*const ArrayEqual = (arr1,arr2)=>{
@@ -89,7 +89,16 @@ const All = () => {
 //   return max;
 // };
 
+// Longest word 
 
+// const LongestWord = (str)=>{
+//   let lower = str.toLowerCase()
+//   let words = lower.split(" ")
+//   const sorting = words.sort((a,b)=>a.length-b.length);
+//   return sorting.at(-1)
+// }
+
+// console.log(LongestWord("Aastha Kalra"));
 
 
 

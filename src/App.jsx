@@ -92,6 +92,8 @@ import Duplicate from "./Javascript/Duplicate";
 import Vowel from "./Javascript/Vowel";
 import PowerOfTwo from "./Javascript/PowerOfTwo";
 import SumOfSquare from "./Javascript/SumOfSquare";
+import FindMin from "./Javascript/FindMin";
+import StringConversion from "./Javascript/StringConversion";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -192,7 +194,9 @@ function App() {
      {/* <Duplicate/> */}
       {/* <Vowel/> */}
       {/* <PowerOfTwo/> */}
-      <SumOfSquare/>
+      {/* <SumOfSquare/> */}
+      {/* <FindMin/> */}
+      <StringConversion/>
     </div>
   );
 }

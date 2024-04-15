@@ -1,14 +1,21 @@
 const Substring = (str,subStr) => {
-    str = str.toLowerCase();
-    subStr = subStr.toLowerCase();
+    // method 1 
 
-    if(str.startsWith(subStr)){
-        return true
-    }
-    else{
-        return false
-    }
+    // str = str.toLowerCase();
+    // subStr = subStr.toLowerCase();
+
+    // if(str.startsWith(subStr)){
+    //     return true
+    // }
+    // else{
+    //     return false
+    // }
+
+
+    // method 2
+
+    return str.toLowerCase().slice(0,subStr.length) === subStr.toLowerCase()
 }
-console.log(Substring("Hello World", "hellow"));
+console.log(Substring("HelloWorld", "hello"));
 
 export default Substring

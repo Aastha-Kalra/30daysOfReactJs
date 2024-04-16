@@ -102,20 +102,32 @@ const All = () => {
 
 //8. Palindrome Number
 
-const Palindrome = (str) => {
-  str = str.toLowerCase().trim();
-  str = str.split("");
-  let rev = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    rev += str[i];
-  }
-  console.log(rev);
-  if (rev === str.join("")) {
-    return "Palindrome";
-  } else {
-    return "not a Palindrome";
-  }
-};
-console.log(Palindrome("racecar"));
-console.log(Palindrome("hellow"));
+// const Palindrome = (str) => {
+//   str = str.toLowerCase().trim();
+//   str = str.split("");
+//   let rev = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     rev += str[i];
+//   }
+//   console.log(rev);
+//   if (rev === str.join("")) {
+//     return "Palindrome";
+//   } else {
+//     return "not a Palindrome";
+//   }
+// };
+// console.log(Palindrome("racecar"));
+// console.log(Palindrome("hellow"));
+
+// 9. PowerOfTwo
+
+// const PowerOfTwo = (n) => {
+//   for (let i = 0; i < n; i++) {
+//     if (2 ** i === n) {
+//       return "Power Of two";
+//     }
+//   }
+//   return "Not Power of two";
+// };
+// console.log(PowerOfTwo(8));
 export default All;

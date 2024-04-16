@@ -89,7 +89,7 @@ const All = () => {
 //   return max;
 // };
 
-// Longest word 
+// 7. Longest word
 
 // const LongestWord = (str)=>{
 //   let lower = str.toLowerCase()
@@ -100,7 +100,22 @@ const All = () => {
 
 // console.log(LongestWord("Aastha Kalra"));
 
+//8. Palindrome Number
 
-
-
+const Palindrome = (str) => {
+  str = str.toLowerCase().trim();
+  str = str.split("");
+  let rev = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    rev += str[i];
+  }
+  console.log(rev);
+  if (rev === str.join("")) {
+    return "Palindrome";
+  } else {
+    return "not a Palindrome";
+  }
+};
+console.log(Palindrome("racecar"));
+console.log(Palindrome("hellow"));
 export default All;

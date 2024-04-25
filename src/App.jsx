@@ -103,6 +103,8 @@ import Occurence from "./Javascript/Occurence";
 import Mode from "./Javascript/Mode";
 import Factorial from "./Recursion/Factorial";
 import Fibonaaci from "./Recursion/Fibonaaci";
+import RepeatString from "./Recursion/RepeatString";
+import TruncateString from "./Recursion/TruncateString";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -215,7 +217,9 @@ function App() {
       {/* <Mode/> */}
      {/* <Factorial/> */}
      {/* <Fibonaaci/> */}
-    <Fibonaaci/>
+    {/* <Fibonaaci/> */}
+    {/* <RepeatString/> */}
+    <TruncateString/>
     </div>
   );
 }

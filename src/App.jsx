@@ -83,7 +83,7 @@ import TriangleType from "./Javascript/TriangleType";
 import Sort from "./Javascript/Sort";
 import Palindrome from "./Javascript/Palindrome";
 import FindMax from "./Javascript/FindMax";
-import Factorial from "./Javascript/Factorial";
+// import Factorial from "./Javascript/Factorial";
 import Average from "./Javascript/Average";
 import ArrayEqual from "./Javascript/ArrayEqual";
 import SumOfNum from "./Javascript/SumOfNum";
@@ -94,6 +94,15 @@ import PowerOfTwo from "./Javascript/PowerOfTwo";
 import SumOfSquare from "./Javascript/SumOfSquare";
 import FindMin from "./Javascript/FindMin";
 import StringConversion from "./Javascript/StringConversion";
+import CharCase from "./Javascript/CharCase";
+import Substring from "./Javascript/Substring";
+import Reverse from "./Javascript/Reverse";
+import CalculatedMean from "./Javascript/CalculatedMean";
+import Median from "./Javascript/Median";
+import Occurence from "./Javascript/Occurence";
+import Mode from "./Javascript/Mode";
+import Factorial from "./Recursion/Factorial";
+import Fibonaaci from "./Recursion/Fibonaaci";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -196,7 +205,17 @@ function App() {
       {/* <PowerOfTwo/> */}
       {/* <SumOfSquare/> */}
       {/* <FindMin/> */}
-      <StringConversion/>
+      {/* <StringConversion/> */}
+      {/* <CharCase/> */}
+      {/* <Substring/> */}
+      {/* <Reverse/> */}
+      {/* <CalculatedMean/> */}
+      {/* <Median/> */}
+      {/* <Occurence/> */}
+      {/* <Mode/> */}
+     {/* <Factorial/> */}
+     {/* <Fibonaaci/> */}
+    <Fibonaaci/>
     </div>
   );
 }

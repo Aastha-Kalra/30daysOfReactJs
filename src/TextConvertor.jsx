@@ -3,6 +3,16 @@ import React, { useState } from "react";
 const TextConvertor = () => {
   const [input, setInput] = useState("");
   const [conversionType, setConversionType] = useState("UpperCase");
+  const Case = () => {
+    if (conversionType === "UpperCase") {
+      let text = input.toUpperCase();
+      setInput(text);
+    } else if (conversionType === "LowerCase") {
+      let text = input.toLowerCase();
+      setInput(text);
+    }
+    return text;
+  };
   return (
     <div className="flex flex-col justify-center items-center gap-10 my-10 text-3xl">
       <h1>TextConvertor</h1>

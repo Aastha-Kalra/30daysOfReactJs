@@ -8,13 +8,15 @@ const TextConvertor = () => {
     if (conversionType === "UpperCase") {
       let text = input.toUpperCase();
       setOutput(text);
-      setInput("")
     } else if (conversionType === "LowerCase") {
       let text = input.toLowerCase();
       setOutput(text);
     }
     else if(conversionType==="Encode Base64"){
         return setOutput(btoa(input))
+    }
+    else if(conversionType==="Decode Base64"){
+        return setOutput(atob(input))
     }
     return text;
   };
@@ -42,6 +44,7 @@ const TextConvertor = () => {
         <option value="UpperCase">UpperCase</option>
         <option value="LowerCase">LowerCase</option>
         <option value="Encode Base64">Encode Base64</option>
+        <option value="Decode Base64">Decode Base64</option>
       </select>
 
       <button onClick={Case} className="bg-green-800 px-4 py-3 text-yellow-400 rounded-xl hover:scale-75 transition-all duration-500 ease-in">Submit</button>

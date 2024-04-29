@@ -63,7 +63,7 @@ const TextConvertor = () => {
           <textarea
             name=""
             id=""
-            cols="30"
+            cols="50"
             rows="5"
             className="bg-yellow-50 focus:outline-none p-4 rounded-md font-semibold font-serif mt-10"
           >
@@ -88,7 +88,7 @@ const TextConvertor = () => {
           <textarea
             name=""
             id=""
-            cols="30"
+            cols="50"
             rows="5"
             className="bg-yellow-50 focus:outline-none p-4 rounded-md font-semibold font-serif"
             placeholder="Type your input here..."

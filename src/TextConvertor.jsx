@@ -5,8 +5,17 @@ const TextConvertor = () => {
   const [conversionType, setConversionType] = useState("UpperCase");
   const [output, setOutput] = useState("");
   const [showOutput, setShowOutput] = useState(false);
+  const [edit, setEdit] = useState("");
+
+  const EditForm = () => {
+    setShowOutput(false);
+  };
+
   const Case = () => {
-    if (conversionType === "UpperCase") {
+    if (input == "") {
+      alert("Please enter the text...");
+      setShowOutput(false);
+    } else if (conversionType === "UpperCase") {
       setOutput(input.toUpperCase());
       setShowOutput(true);
     } else if (conversionType === "LowerCase") {
@@ -19,7 +28,7 @@ const TextConvertor = () => {
       setOutput(atob(input));
       setShowOutput(true);
     }
-    setInput("")
+    setInput("");
   };
   return (
     <div className="flex flex-col justify-start items-start gap-5 my-10 text-3xl px-10">
@@ -43,8 +52,9 @@ const TextConvertor = () => {
             <button className="bg-green-800 px-10 py-3 text-yellow-400 rounded-xl hover:scale-95 transition-all duration-500 ease-in ">
               Edit
             </button>
-            <button className="bg-green-800 px-10 py-3 text-yellow-400 rounded-xl hover:scale-95 transition-all duration-500 ease-in "
-            onClick={()=>setShowOutput(false)}
+            <button
+              className="bg-green-800 px-10 py-3 text-yellow-400 rounded-xl hover:scale-95 transition-all duration-500 ease-in "
+              onClick={() => setShowOutput(false)}
             >
               Convert More
             </button>

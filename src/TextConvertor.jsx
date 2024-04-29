@@ -13,6 +13,11 @@ const TextConvertor = () => {
     setEdit(true);
   };
   
+  const convertMore = ()=>{
+    setInput(" ")
+    setShowOutput(false)
+  } 
+
   const Case = () => {
     let textToConvert = edit ? input : input.trim(); // Use the edited text if in edit mode
     if (textToConvert === "") {
@@ -71,7 +76,7 @@ const TextConvertor = () => {
             </button>
             <button
               className="bg-green-800 px-10 py-3 text-yellow-400 rounded-xl hover:scale-95 transition-all duration-500 ease-in "
-              onClick={() => setShowOutput(false)}
+              onClick={convertMore}
             >
               Convert More
             </button>

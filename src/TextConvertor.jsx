@@ -6,37 +6,54 @@ const TextConvertor = () => {
   const [output, setOutput] = useState("");
   const [showOutput, setShowOutput] = useState(false);
   const [edit, setEdit] = useState("");
-
   const EditForm = () => {
-    setShowOutput(false);
+    setInput(input);
+    setOutput(""); // Clear the output when editing
+    setShowOutput(false); // Hide the output until the user submits the edited text
+    setEdit(true);
   };
-
+  
   const Case = () => {
-    if (input == "") {
-      alert("Please enter the text...");
-      setShowOutput(false);
-    } else if (conversionType === "UpperCase") {
-      setOutput(input.toUpperCase());
-      setShowOutput(true);
-    } else if (conversionType === "LowerCase") {
-      setOutput(input.toLowerCase());
-      setShowOutput(true);
-    } else if (conversionType === "Encode Base64") {
-      setOutput(btoa(input));
-      setShowOutput(true);
-    } else if (conversionType === "Decode Base64") {
-      setOutput(atob(input));
-      setShowOutput(true);
+    let textToConvert = edit ? input : input.trim(); // Use the edited text if in edit mode
+    if (textToConvert === "") {
+      alert("Please enter text to convert.");
+      return;
     }
-    setInput("");
+    switch (conversionType) {
+      case "UpperCase":
+        setOutput(textToConvert.toUpperCase());
+        setShowOutput(true);
+        break;
+      case "LowerCase":
+        setOutput(textToConvert.toLowerCase());
+        setShowOutput(true);
+        break;
+      case "Encode Base64":
+        setOutput(btoa(textToConvert));
+        setShowOutput(true);
+        break;
+      case "Decode Base64":
+        setOutput(atob(textToConvert));
+        setShowOutput(true);
+        break;
+      default:
+        alert("Unsupported conversion type.");
+        break;
+    }
+  
+    if (edit) {
+      setEdit(false); // Reset edit mode after conversion
+    }
   };
+  
+  
   return (
     <div className="flex flex-col justify-start items-start gap-5 my-10 text-3xl px-10">
       <h1 className="text-center w-full font-bold text-yellow-400">
         TextConvertor
       </h1>
 
-      {showOutput ? (
+      {!edit && showOutput ? (
         <div className=" flex flex-col w-full justify-center items-center">
           <textarea
             name=""
@@ -49,7 +66,7 @@ const TextConvertor = () => {
           </textarea>
 
           <div className="flex gap-4 mt-10">
-            <button className="bg-green-800 px-10 py-3 text-yellow-400 rounded-xl hover:scale-95 transition-all duration-500 ease-in ">
+            <button className="bg-green-800 px-10 py-3 text-yellow-400 rounded-xl hover:scale-95 transition-all duration-500 ease-in " onClick={EditForm}>
               Edit
             </button>
             <button

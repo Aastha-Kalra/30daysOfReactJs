@@ -5,6 +5,12 @@ const Factorial = (n) => {
   //     fact = fact * i;
   //   }
   //   return fact
+
+    // using reduce
+    let arr = Array.from(Array(n + 1).keys());
+    console.log(arr.slice(1,));
+    let res = arr.slice(1,).reduce((a, b) => a * b);
+    console.log(res);
 };
 
 console.log(Factorial(5));

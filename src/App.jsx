@@ -105,6 +105,12 @@ import Factorial from "./Recursion/Factorial";
 import Fibonaaci from "./Recursion/Fibonaaci";
 import RepeatString from "./Recursion/RepeatString";
 import TruncateString from "./Recursion/TruncateString";
+import ConsecutiveArrayNumbers from "./Recursion/ConsecutiveArrayNumbers";
+import NumberRange from "./Recursion/NumberRange";
+import PasswordValidator from "./Recursion/PasswordValidator";
+import TextConvertor from "./TextConvertor";
+import RandomHexColor from "./RandomHexColor";
+import BusinessNameGen from "./BusinessNameGen";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -219,7 +225,13 @@ function App() {
      {/* <Fibonaaci/> */}
     {/* <Fibonaaci/> */}
     {/* <RepeatString/> */}
-    <TruncateString/>
+   {/* <TruncateString/> */}
+    {/* <ConsecutiveArrayNumbers/> */}
+    {/* <NumberRange/> */}
+    {/* <PasswordValidator/> */}
+    {/* <TextConvertor/> */}
+    {/* <RandomHexColor/> */}
+    <BusinessNameGen/>
     </div>
   );
 }

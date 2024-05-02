@@ -111,6 +111,8 @@ import PasswordValidator from "./Recursion/PasswordValidator";
 import TextConvertor from "./TextConvertor";
 import RandomHexColor from "./RandomHexColor";
 import BusinessNameGen from "./BusinessNameGen";
+import RandomBg from "./RandomBg";
+import NewNodeInsertion from "./NewNodeInsertion";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
@@ -231,7 +233,9 @@ function App() {
     {/* <PasswordValidator/> */}
     {/* <TextConvertor/> */}
     {/* <RandomHexColor/> */}
-    <BusinessNameGen/>
+    {/* <BusinessNameGen/> */}
+    {/* <RandomBg/> */}
+    <NewNodeInsertion/>
     </div>
   );
 }

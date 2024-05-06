@@ -7,7 +7,27 @@ const TextToAudio = () => {
   const [visitedText, setVisitedText] = useState([]);
   const audioRef = useRef();
 
- 
+  useEffect(() => {
+    const audioElement = audioRef.current;
+
+    const handleTimeUpdate = () => {
+      const currentTime = audioElement.currentTime;
+      const wordIndex = WORDS_WITH_TIMINGS.findIndex(
+        (w) => currentTime >= w.startTime && currentTime < w.startTime + 0.25
+      );
+      setHighlightedIndex(wordIndex);
+      if (wordIndex !== -1 && !visitedText.includes(wordIndex)) {
+        setVisitedText([...visitedText, wordIndex])
+      }
+    };
+
+    audioElement.addEventListener("timeupdate", handleTimeUpdate);
+
+    return () => {
+      audioElement.removeEventListener("timeupdate", handleTimeUpdate);
+    };
+  }, [visitedText]);
+
   return (
     <div className="flex flex-col justify-center items-center px-44 bg-slate-900 text-xl gap-10 my-10 py-10">
       <div>TextToAudio</div>

@@ -113,9 +113,10 @@ import RandomHexColor from "./RandomHexColor";
 import BusinessNameGen from "./BusinessNameGen";
 import RandomBg from "./RandomBg";
 import NewNodeInsertion from "./NewNodeInsertion";
+import TextToAudio from "./TextToAudio/TextToAudio";
 function App() {
   return (
-    <div className="bg-black min-h-screen w-full overflow-hidden text-green-500">
+    <div className="bg-black min-h-screen w-full overflow-hidden  flex justify-center items-center">
       {/* <SearchFilter/> */}
       {/* <ItemsPerPage/> */}
       {/* <ColorPicker/> */}
@@ -235,7 +236,8 @@ function App() {
     {/* <RandomHexColor/> */}
     {/* <BusinessNameGen/> */}
     {/* <RandomBg/> */}
-    <NewNodeInsertion/>
+    {/* <NewNodeInsertion/> */}
+<TextToAudio/>
     </div>
   );
 }

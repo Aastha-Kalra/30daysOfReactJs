@@ -5,6 +5,27 @@ const AutoCollapse = () => {
   const [text] = useState(data);
   const [activeSlide, setActiveSlide] = useState(0);
   const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => (prev >= 100 ? 0 : prev + 1));
+    }, 50);
+
+    if (progress === 100) {
+      if (activeSlide === 2) {
+        setActiveSlide(0);
+      } else {
+        setActiveSlide(activeSlide + 1);
+      }
+      setProgress(0);
+    }
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [progress, activeSlide]);
+
+
+
   return (
     <div className="text-white flex flex-col gap-5 justify-center items-center">
       <div className="font-extrabold text-4xl text-sky-600">AutoCollapse</div>

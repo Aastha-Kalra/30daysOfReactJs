@@ -24,7 +24,10 @@ const AutoCollapse = () => {
     };
   }, [progress, activeSlide]);
 
-
+  const handleToggleSlide = (index) => {
+    setActiveSlide(index === activeSlide ? null : index);
+    setProgress(0);
+  };
 
   return (
     <div className="text-white flex flex-col gap-5 justify-center items-center">

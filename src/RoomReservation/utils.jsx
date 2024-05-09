@@ -7,6 +7,6 @@ export const ROOMS_DATA = Array(15)
   }));
 
 export const USER_DATA = {
-  lastName: 'Mr. Kalra',
+  lastName: 'Ms. Kalra',
   credits: Math.floor(Math.random() * 25) + 5,
 };

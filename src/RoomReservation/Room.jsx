@@ -28,8 +28,8 @@ const Room = React.memo(({ room, onroomClick, credits }) => {
       <div
         className={`w-44 h-44 bg-slate-900 p-4 rounded-sm flex flex-col justify-center items-center font-semibold text-md cursor-pointer`}
       >
-        <p className="text-teal-300">R : {room.id + 1}</p>
-        <p className="text-teal-300">Cost: {room.cost}</p>
+        <p className="text-white">R : {room.id + 1}</p>
+        <p className="text-white">Cost: {room.cost}</p>
         <p className={`text-center`} style={{ color: status }}>
           Status:{" "}
           {room.isReserved

@@ -10,7 +10,7 @@ const RoomBooking = () => {
   const handleRoomClick = (room) => {
     const roomIndex = roomData.findIndex((r) => r.id === room.id);
     const updatedRoomData = [...roomData];
-    
+
     if (!room.isReserved && room.cost <= user.credits) {
       // Reserve the room
       updatedRoomData[roomIndex] = { ...room, isReserved: true };
@@ -22,9 +22,7 @@ const RoomBooking = () => {
     } else {
       // Unreserve the room
       updatedRoomData[roomIndex] = { ...room, isReserved: false };
-      setBookedRooms((prevRooms) =>
-        prevRooms.filter((r) => r.id !== room.id)
-      );
+      setBookedRooms((prevRooms) => prevRooms.filter((r) => r.id !== room.id));
       setUser((prevUser) => ({
         ...prevUser,
         credits: prevUser.credits + room.cost,
@@ -39,8 +37,10 @@ const RoomBooking = () => {
     (room) => !room.isReserved && room.cost <= user.credits
   );
   return (
-    <div className="flex mx-9 my-5 w-full">
-      <div className="grid grid-cols-3 gap-6 w-full ">
+   <div className="flex flex-col justify-center items-center my-4 p-2">
+    <div className="text-white  border-b-2 w-full my-4">Book A Room!!</div>
+    <div className="flex md:flex-row flex-col my-5 w-full">
+      <div className="grid lg:grid-cols-3 grid-cols-2 gap-6 mx-2 md:mx-0  w-full ">
         {roomData.map((room) => {
           return (
             <div>
@@ -60,6 +60,7 @@ const RoomBooking = () => {
         availableRooms={availableRooms}
       />
     </div>
+   </div>
   );
 };
 

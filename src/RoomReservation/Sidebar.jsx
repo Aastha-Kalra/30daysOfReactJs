@@ -2,7 +2,7 @@ import React from "react";
 const Sidebar = ({ user, bookedRooms, availableRooms }) => {
   const available = availableRooms.length;
   return (
-    <div className=" bg-slate-900 p-14 w-3/4 mx-4 text-yellow-500 text-xl">
+    <div className=" bg-slate-900 p-4 md:p-14 w-full md:w-3/4 mx-4 mt-5 text-yellow-500 text-xl">
       <div className="flex gap-2">
         Hello,
         <p>

@@ -5,7 +5,9 @@ const Password = () => {
     const [strength,setStrength] = useState(0)
 
     useEffect(()=>{
-        
+        if(password.length >=3){
+            
+        }
 
     },[password])
   return (

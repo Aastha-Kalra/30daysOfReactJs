@@ -6,18 +6,18 @@ const Password = () => {
 
     useEffect(()=>{
         if(password.length >=3){
-            
+            setPassword(password)
         }
-
     },[password])
   return (
-    <>
+    <div className="text-yellow-500">
     <div>Password Validator</div>
     <div>
         <input type="password" value={password}  onChange={(e)=>setPassword(e.target.value)}/>
         <p>Strength of your password (out of 10) is : {strength} </p>
     </div>
-    </>
+    {password}
+    </div>
   )
 };
 

@@ -114,6 +114,8 @@ import BusinessNameGen from "./BusinessNameGen";
 import RandomBg from "./RandomBg";
 import NewNodeInsertion from "./NewNodeInsertion";
 import TextToAudio from "./TextToAudio/TextToAudio";
+import AutoCollapse from "./AutoCollapse/AutoCollapse";
+import Password from "./PasswordValidator/password";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden  flex justify-center items-center">
@@ -237,7 +239,11 @@ function App() {
     {/* <BusinessNameGen/> */}
     {/* <RandomBg/> */}
     {/* <NewNodeInsertion/> */}
-<TextToAudio/>
+{/* <TextToAudio/> */}
+{/* <AutoCollapse/> */}
+<Password/>
+
+
     </div>
   );
 }

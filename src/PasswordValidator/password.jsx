@@ -48,8 +48,8 @@ const Password = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <div>
-          <div className={`h-full ${getProgressColor()}`} style={{width:`${strength*10 }%`}} >
+        <div className="w-full h-2 my-3 bg-gray-400 rounded-xl">
+          <div className={`h-full rounded-xl ${getProgressColor()}`} style={{width:`${strength*10 }%`}} >
           </div>
         </div>
         <p>Strength of your password (out of 10) is: {strength}/10 ({getStrengthLabel()})</p>

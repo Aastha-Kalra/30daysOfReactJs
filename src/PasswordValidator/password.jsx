@@ -6,7 +6,7 @@ const Password = () => {
 
   useEffect(() => {
     let calculatedStrength = 0;
-    if (passwordStrength >= 6 && passwordStrength <= 32) {
+    if (password.length>= 6 && password.length <= 32) {
       calculatedStrength += Math.min(6, password.length / 2);
     }
     if (/A-Z/.test(password)) {
@@ -24,15 +24,14 @@ const Password = () => {
     setStrength(Math.min(10, calculatedStrength));
   }, [password]);
 
-  const getStrengthLabel = ()=>{
-    if(strength>8) return 'Strong'
-    if(strength>6) return 'Moderate'
-    if(strength>3) return 'Week'
-    return 'Very week'
-  }
+  const getStrengthLabel = () => {
+    if (strength > 8) return "Strong";
+    if (strength > 6) return "Moderate";
+    if (strength > 3) return "Week";
+    return "Very week";
+  };
 
 
-  
   return (
     <div className="text-yellow-500">
       <div>Password Validator</div>
@@ -41,9 +40,12 @@ const Password = () => {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          disabled={passwordStrength >= 10}
         />
-        <p>Strength of your password (out of 10) is: {strength}</p>
+        <div>
+          <div className={`h-full ${getProgressColor()}`} style={{width:`${strength*10 }%`}} >
+          </div>
+        </div>
+        <p>Strength of your password (out of 10) is: {strength}/10 ({getStrengthLabel()})</p>
       </div>
       {password}
     </div>

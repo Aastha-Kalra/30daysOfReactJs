@@ -31,6 +31,13 @@ const Password = () => {
     return "Very week";
   };
 
+  const getProgressColor = () => {
+    if(strength>8) return 'bg-green-500'
+    if(strength>6) return 'bg-yellow-500'
+    if(strength>3) return 'bg-orange-500'
+    return 'bg-red-500'
+
+  };
 
   return (
     <div className="text-yellow-500">

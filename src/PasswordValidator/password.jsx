@@ -24,6 +24,15 @@ const Password = () => {
     setStrength(Math.min(10, calculatedStrength));
   }, [password]);
 
+  const getStrengthLabel = ()=>{
+    if(strength>8) return 'Strong'
+    if(strength>6) return 'Moderate'
+    if(strength>3) return 'Week'
+    return 'Very week'
+  }
+
+
+  
   return (
     <div className="text-yellow-500">
       <div>Password Validator</div>

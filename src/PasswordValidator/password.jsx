@@ -6,7 +6,7 @@ const Password = () => {
 
   useEffect(() => {
     let calculatedStrength = 0;
-    if (password.length>= 6 && password.length <= 32) {
+    if (password.length >= 6 && password.length <= 32) {
       calculatedStrength += Math.min(6, password.length / 2);
     }
     if (/A-Z/.test(password)) {
@@ -25,36 +25,40 @@ const Password = () => {
   }, [password]);
 
   const getStrengthLabel = () => {
-    if (strength > 8) return "Strong";
+    if (strength > 7) return "Strong";
     if (strength > 6) return "Moderate";
     if (strength > 3) return "Week";
     return "Very week";
   };
 
   const getProgressColor = () => {
-    if(strength>8) return 'bg-green-500'
-    if(strength>6) return 'bg-yellow-500'
-    if(strength>3) return 'bg-orange-500'
-    return 'bg-red-500'
-
+    if (strength > 7) return "bg-green-500";
+    if (strength > 6) return "bg-yellow-500";
+    if (strength > 3) return "bg-orange-500";
+    return "bg-red-500";
   };
 
   return (
     <div className="text-yellow-500">
-      <div>Password Validator</div>
+      <div className="text-4xl my-4 text-center">Password Validator</div>
       <div>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="w-full bg-slate-300 focus:outline-none p-2 text-lg rounded-lg"
         />
         <div className="w-full h-2 my-3 bg-gray-400 rounded-xl">
-          <div className={`h-full rounded-xl ${getProgressColor()}`} style={{width:`${strength*10 }%`}} >
-          </div>
+          <div
+            className={`h-full rounded-xl ${getProgressColor()}`}
+            style={{ width: `${strength * 10}%` }}
+          ></div>
         </div>
-        <p>Strength of your password (out of 10) is: {strength}/10 ({getStrengthLabel()})</p>
+        <p>
+          Strength of your password is : {strength}/10 ({getStrengthLabel()})
+        </p>
       </div>
-      {password}
+      Your Password : {password}
     </div>
   );
 };

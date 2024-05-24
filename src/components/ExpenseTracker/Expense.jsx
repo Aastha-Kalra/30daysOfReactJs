@@ -7,14 +7,16 @@ const Expense = () => {
   const [total, setTotal] = useState(0);
   const HandleSubmit = (e) => {
     e.preventDefault();
-    const expenses = {
-      amount: parseInt(amount),
-      description: description,
-    };
-    setExpense([...expense, expenses]);
-    setTotal(total + expenses.amount);
-    setAmount("");
-    setDescription("");
+    if (amount.trim() !== "") {
+      const expenses = {
+        amount: parseInt(amount),
+        description: description,
+      };
+      setExpense([...expense, expenses]);
+      setTotal(total + expenses.amount);
+      setAmount("");
+      setDescription("");
+    }
   };
 
   return (

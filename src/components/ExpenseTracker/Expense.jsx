@@ -8,11 +8,11 @@ const Expense = () => {
   const HandleSubmit = (e) => {
     e.preventDefault();
     const expenses = {
-      amount: amount,
+      amount: parseInt(amount),
       description: description,
     };
     setExpense([...expense, expenses]);
-    setTotal([...(total + expenses.amount)]);
+    setTotal(total + expenses.amount);
     setAmount("");
     setDescription("");
   };

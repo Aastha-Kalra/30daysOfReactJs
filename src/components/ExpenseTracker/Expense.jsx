@@ -17,6 +17,9 @@ const Expense = () => {
       setAmount("");
       setDescription("");
     }
+    else{
+        alert("Enter the values first")
+    }
   };
 
   return (
@@ -70,7 +73,7 @@ const Expense = () => {
       </div>
 
       <div>
-        <h2>Total amount spent : {total} </h2>
+        <h2>Total amount spent : ${total} </h2>
       </div>
     </div>
   );

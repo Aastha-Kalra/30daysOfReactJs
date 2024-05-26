@@ -11,6 +11,7 @@ const Expense = () => {
       const expenses = {
         amount: parseInt(amount),
         description: description,
+        id:expense.length
       };
       setExpense([...expense, expenses]);
       setTotal(total + expenses.amount);
@@ -21,6 +22,11 @@ const Expense = () => {
         alert("Enter the values first")
     }
   };
+
+  const HandleDelete = (id)=>{
+    const filteredExpense =  expense.filter((ex)=>ex.id !== id)
+    setExpense(filteredExpense)
+  }
 
   return (
     <div className="bg-black min-h-screen text-white text-xl flex flex-col justify-center items-center gap-12 ">
@@ -65,6 +71,7 @@ const Expense = () => {
                 <tr>
                   <td className="px-4">{ex.amount}</td>
                   <td className="px-4">{ex.description}</td>
+                  <td onClick={()=>HandleDelete(ex.id)}>Delete</td>
                 </tr>
               </>
             );

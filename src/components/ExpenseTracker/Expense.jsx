@@ -24,9 +24,9 @@ const Expense = () => {
 
   const HandleDelete = (id) => {
     const filteredExpense = expense.filter((ex) => ex.id !== id);
-    const UpdatedTotal = expense.find((ex) => ex.id !== id);
+    const UpdatedTotal = expense.find((ex) => ex.id === id);
     if (UpdatedTotal) {
-      setExpense(total - UpdatedTotal.amount);
+      setTotal(total - UpdatedTotal.amount);
     }
     setExpense(filteredExpense);
   };

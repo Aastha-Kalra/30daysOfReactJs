@@ -71,7 +71,7 @@ const Expense = () => {
                 <tr>
                   <td className="px-4">{ex.amount}</td>
                   <td className="px-4">{ex.description}</td>
-                  <td onClick={()=>HandleDelete(ex.id)}>Delete</td>
+                  <td className="cursor-pointer" onClick={()=>HandleDelete(ex.id)}>Delete</td>
                 </tr>
               </>
             );

@@ -11,22 +11,25 @@ const Expense = () => {
       const expenses = {
         amount: parseInt(amount),
         description: description,
-        id:expense.length
+        id: expense.length,
       };
       setExpense([...expense, expenses]);
       setTotal(total + expenses.amount);
       setAmount("");
       setDescription("");
-    }
-    else{
-        alert("Enter the values first")
+    } else {
+      alert("Enter the values first");
     }
   };
 
-  const HandleDelete = (id)=>{
-    const filteredExpense =  expense.filter((ex)=>ex.id !== id)
-    setExpense(filteredExpense)
-  }
+  const HandleDelete = (id) => {
+    const filteredExpense = expense.filter((ex) => ex.id !== id);
+    const UpdatedTotal = expense.find((ex) => ex.id !== id);
+    if (UpdatedTotal) {
+      setExpense(total - UpdatedTotal.amount);
+    }
+    setExpense(filteredExpense);
+  };
 
   return (
     <div className="bg-black min-h-screen text-white text-xl flex flex-col justify-center items-center gap-12 ">
@@ -71,7 +74,12 @@ const Expense = () => {
                 <tr>
                   <td className="px-4">{ex.amount}</td>
                   <td className="px-4">{ex.description}</td>
-                  <td className="cursor-pointer" onClick={()=>HandleDelete(ex.id)}>Delete</td>
+                  <td
+                    className="cursor-pointer"
+                    onClick={() => HandleDelete(ex.id)}
+                  >
+                    Delete
+                  </td>
                 </tr>
               </>
             );

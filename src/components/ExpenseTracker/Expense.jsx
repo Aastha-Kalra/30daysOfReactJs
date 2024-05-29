@@ -12,7 +12,10 @@ const Expense = () => {
         amount: parseInt(amount),
         description: description,
         id: expense.length,
+        date:new Date().toLocaleDateString()
       };
+
+
       setExpense([...expense, expenses]);
       setTotal(total + expenses.amount);
       setAmount("");
@@ -64,7 +67,7 @@ const Expense = () => {
       <div>
         <table>
           <tr className="border-2">
-            <th className="border-2 px-2 ">Expense Amount</th>
+            <th className="border-2 px-2">Expense Amount</th>
             <th>Expense Description</th>
           </tr>
 
@@ -74,8 +77,9 @@ const Expense = () => {
                 <tr>
                   <td className="px-4">{ex.amount}</td>
                   <td className="px-4">{ex.description}</td>
+                  <td className="px-4">{ex.date}</td>
                   <td
-                    className="cursor-pointer"
+                    className="cursor-pointer bg-yellow-400 px-4 py-2 hover:bg-black  hover:text-yellow-400 transition-all duration-500 ease-in hover:scale-75 delay-700"
                     onClick={() => HandleDelete(ex.id)}
                   >
                     Delete

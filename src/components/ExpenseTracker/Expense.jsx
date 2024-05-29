@@ -39,20 +39,22 @@ const Expense = () => {
       <div>
         <label htmlFor="">Amount</label>
         <input
-          type="number"
+          inputMode="number"
           name=""
           id=""
-          className="text-black mx-4"
+          style={{}}
+          className="text-black mx-4 bg-slate-300 focus:outline-none rounded-md p-2"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
       </div>
 
-      <div>
-        <label htmlFor="">Description</label>
-        <input
-          type="text"
-          className="text-black mx-4"
+      <div className="flex items-start">
+        <label htmlFor="" className="text-start">Description</label>
+        <textarea
+        rows={3}
+        cols={25}
+          className="text-black mx-4 bg-slate-300 focus:outline-none rounded-md p-2"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
@@ -79,7 +81,7 @@ const Expense = () => {
                   <td className="px-4">{ex.description}</td>
                   <td className="px-4">{ex.date}</td>
                   <td
-                    className="cursor-pointer bg-yellow-400 px-4 py-2 hover:bg-black  hover:text-yellow-400 transition-all duration-500 ease-in hover:scale-75 delay-700"
+                    className="cursor-pointer"
                     onClick={() => HandleDelete(ex.id)}
                   >
                     Delete

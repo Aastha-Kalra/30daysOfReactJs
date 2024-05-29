@@ -70,7 +70,8 @@ const Expense = () => {
         <table>
           <tr className="border-2">
             <th className="border-2 px-2">Expense Amount</th>
-            <th>Expense Description</th>
+            <th className="border-2 px-2">Expense Description</th>
+            <th>Date</th>
           </tr>
 
           {expense.map((ex) => {

@@ -1,10 +1,30 @@
 import React, { useState } from "react";
 
+
 const MemoryGame = ({ images }) => {
   const [cards, setCards] = useState(shuffle([...images, ...images]));
   const [flippedCards, setFlippedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
   const [disabled, setDisabled] = useState(false);
+
+  const handleCardClick = (index) => {
+    if (disabled || flippedCards.includes(index) || matchedCards.includes(index)) return;
+
+    const newFlippedCards = [...flippedCards, index];
+    setFlippedCards(newFlippedCards);
+
+    if (newFlippedCards.length === 2) {
+      setDisabled(true);
+      setTimeout(() => {
+        const [firstIndex, secondIndex] = newFlippedCards;
+        if (cards[firstIndex].img === cards[secondIndex].img) {
+          setMatchedCards([...matchedCards, firstIndex, secondIndex]);
+        }
+        setFlippedCards([]);
+        setDisabled(false);
+      }, 1000);
+    }
+  };
 
   return (
     <div className="grid grid-cols-3 gap-5 my-14">
@@ -15,11 +35,7 @@ const MemoryGame = ({ images }) => {
           onClick={() => handleCardClick(index)}
         >
           <img
-            src={
-              flippedCards.includes(index) || matchedCards.includes(index)
-                ? card.img
-                : "https://via.placeholder.com/150"
-            }
+            src={flippedCards.includes(index) || matchedCards.includes(index) ? card.img : "https://via.placeholder.com/150"}
             alt="Memory Card"
             className="w-64 h-64 cursor-pointer"
           />
@@ -28,6 +44,8 @@ const MemoryGame = ({ images }) => {
     </div>
   );
 };
+
+
 
 const images = [
   { img: "https://images.unsplash.com/photo-1626808642875-0aa545482dfb" },
@@ -48,3 +66,4 @@ const App = () => {
 };
 
 export default App;
+

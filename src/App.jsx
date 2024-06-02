@@ -116,6 +116,9 @@ import NewNodeInsertion from "./NewNodeInsertion";
 import TextToAudio from "./TextToAudio/TextToAudio";
 import AutoCollapse from "./AutoCollapse/AutoCollapse";
 import Password from "./PasswordValidator/password";
+import Expense from "./components/ExpenseTracker/Expense";
+import MemoryGame from "./Game/MemoryGame";
+import LoderAnimation from "./Loader/LoderAnimation";
 function App() {
   return (
     <div className="bg-black min-h-screen w-full overflow-hidden  flex justify-center items-center">
@@ -241,9 +244,10 @@ function App() {
     {/* <NewNodeInsertion/> */}
 {/* <TextToAudio/> */}
 {/* <AutoCollapse/> */}
-<Password/>
-
-
+{/* <Password/> */}
+{/* <Expense/> */}
+{/* <MemoryGame/> */}
+<LoderAnimation/>
     </div>
   );
 }

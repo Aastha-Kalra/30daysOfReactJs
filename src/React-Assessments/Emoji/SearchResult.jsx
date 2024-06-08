@@ -32,7 +32,7 @@ const SearchResult = ({ filtered }) => {
                   : ""
               } cursor-pointer`}
             />
-            <p>{item.title}</p>
+            <p className="text-white/50">{item.title}</p>
           </div>
         );
       })}

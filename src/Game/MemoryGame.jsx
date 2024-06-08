@@ -1,14 +1,25 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import LoderAnimation from "../Loader/LoderAnimation";
 
 const MemoryGame = ({ images }) => {
-  const [cards, setCards] = useState(shuffle([...images, ...images]));
+  const [cards, setCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
   const [disabled, setDisabled] = useState(false);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setCards(shuffle([...images, ...images]));
+      setLoading(false);
+    }, 200); // Simulate a delay for loading
+  }, [images]);
   const handleCardClick = (index) => {
-    if (disabled || flippedCards.includes(index) || matchedCards.includes(index)) return;
+    if (
+      disabled ||
+      flippedCards.includes(index) ||
+      matchedCards.includes(index)
+    )
+      return;
 
     const newFlippedCards = [...flippedCards, index];
     setFlippedCards(newFlippedCards);
@@ -35,7 +46,11 @@ const MemoryGame = ({ images }) => {
           onClick={() => handleCardClick(index)}
         >
           <img
-            src={flippedCards.includes(index) || matchedCards.includes(index) ? card.img : "https://via.placeholder.com/150"}
+            src={
+              flippedCards.includes(index) || matchedCards.includes(index)
+                ? card.img
+                : "https://via.placeholder.com/150"
+            }
             alt="Memory Card"
             className="w-64 h-64 cursor-pointer"
           />
@@ -46,14 +61,17 @@ const MemoryGame = ({ images }) => {
 };
 
 const shuffle = (array) => {
-  let currentIndex = array.length, randomIndex;
+  let currentIndex = array.length,
+    randomIndex;
 
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
 
     [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
+      array[randomIndex],
+      array[currentIndex],
+    ];
   }
 
   return array;
@@ -69,13 +87,24 @@ const images = [
 ];
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // 2 seconds delay
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
   return (
     <div className="App">
       <h1>Memory Game</h1>
-      <MemoryGame images={images} />
+      {
+        loading ? <LoderAnimation/> : <MemoryGame images={images}/>
+      }
     </div>
   );
 };
 
 export default App;
-

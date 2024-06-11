@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-const SearchResult = ({filteredItem}) => {
+const SearchResult = ({ filteredItem }) => {
+  const [selectedItem, setSelectedItem] = useState(null);
+  const CopyToClipBoard = (src) => {
+    navigator.clipboard.writeText(src);
+  };
+
   return (
     <>
       <div>SearchResult</div>
@@ -10,7 +15,9 @@ const SearchResult = ({filteredItem}) => {
           const src = `//cdn.jsdelivr.net/emojione/assets/png/${hexCode}.png`;
           return (
             <div className="bg-slate-800 p-4 rounded-md cursor-pointer">
-              <img src={src} alt="" />
+              <img src={src} alt="" onClick={() => HandleClick(src)} className={
+                `${selectedItem === src  ?  'bg-sky-600 p-4 rounded-md' : null} `
+              } />
             </div>
           );
         })}

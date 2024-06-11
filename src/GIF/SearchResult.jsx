@@ -5,6 +5,11 @@ const SearchResult = ({ filteredItem }) => {
   const CopyToClipBoard = (src) => {
     navigator.clipboard.writeText(src);
   };
+  
+  const HandleClick = (item) => {
+    CopyToClipBoard(item);
+    setSelectedItem(item);
+  };
 
   return (
     <>
